@@ -1,0 +1,2120 @@
+/*!
+Theme Name: PlaygroundTheme
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: playgroundtheme
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+PlaygroundTheme is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Box sizing
+--------------------------------------------- */
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+  background: #fff;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+  color: #4169e1;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #191970;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+select {
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Navigation
+--------------------------------------------- */
+.main-navigation {
+  display: block;
+  width: 100%;
+}
+
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -999em;
+  z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  display: block;
+  left: auto;
+}
+
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+.main-navigation li {
+  position: relative;
+}
+
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+  }
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+  display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  text-align: end;
+  flex: 1 0 50%;
+}
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+  display: block;
+}
+
+.post,
+.page {
+  margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+  margin: 0 0 1.5em;
+}
+
+.widget select {
+  max-width: 100%;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-gap: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}
+
+/* 
+============================================================
+MY CUSTOM STYLES (MATCHING FIGMA)
+============================================================
+
+*/
+
+/* --- Global Variables --- */
+:root {
+  --font-main: "Figtree", sans-serif;
+  --primary-red: #e31e24;
+  --text-dark: #111111;
+}
+
+/* --- Base Typography --- */
+body {
+  font-family: var(--font-main);
+  font-weight: 400; /* Regular for body text */
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Heading Styles (Matching Figma) --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+/* --- 1. Global Layout --- */
+
+html {
+  margin-top: 0 !important;
+}
+
+.site-header {
+  margin: 0;
+  padding: 0;
+  position: absolute; /* This makes the header "float" over the Hero image */
+  width: 100%;
+  z-index: 100;
+  background: transparent; /* Or #ffffff if you want it white like Figma */
+}
+
+.site-footer {
+  display: none;
+}
+
+#site-navigation {
+  display: none; /* Hides the default menu since we don't have a mobile menu set up yet */
+}
+
+/* Hide the default site title and description */
+.site-title,
+.site-description {
+  display: none !important;
+}
+
+/* Make sure the header doesn't push the hero down */
+.site-header {
+  position: absolute; /* Allows hero to sit behind the header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent; /* Or #ffffff depending on Figma */
+}
+
+/* Also, reset the default WordPress group margins */
+.site-main {
+  margin-top: 0 !important;
+}
+
+#page {
+  margin: 0;
+}
+
+.hp-hero {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px; /* Adjust this to match your Figma frame width */
+  margin: 0 auto;
+}
+
+.hp-hero__inner {
+  width: 100%;
+}
+
+/* =========================================================================================================
+   |   FRONT-PAGE ||
+============================================================================================================*/
+
+/* 
+============================================================
+-- DESKTOP VIEW --
+============================================================
+*/
+
+@media (min-width: 768px) {
+  /* --- Hero Section --- */
+  .hp-hero {
+    aspect-ratio: 1664 / 700; /* Same proportions as the front-page image */
+    background-size: cover; /* Cover works better than contain for category pages */
+    background-position: center;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-size: contain; /* Keep contain for front-page if that's intentional */
+    background-position: top center;
+    align-items: center;
+  }
+
+  /* Dark overlay for readability */
+  .hp-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .hp-hero__inner {
+    width: 100%;
+  }
+
+  .hp-hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 380px;
+  }
+
+  /* --- 3. Hero Text --- */
+  .hp-hero__intro {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+  }
+
+  .hp-hero__title {
+    font-weight: 700;
+    line-height: 1.1;
+    font-style: bold;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 4.5rem; /* Large and impactful */
+    letter-spacing: 0em; /* Tighter spacing for headlines */
+    font-family: var(--font-main);
+    margin-top: 0;
+  }
+
+  /* --- 4. Buttons --- */
+  .hp-hero__actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  .hp-hero__actions .btn {
+    display: inline-block;
+    background-color: #e31e24; /* Kompan Red */
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-main);
+    letter-spacing: 0.01em;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: none; /* Keep text as written */
+    margin-right: 15px;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+
+  /* --- Intro Section --- */
+  .hp-intro {
+    padding: 100px 0; /* Big white space above and below */
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .container--narrow {
+    max-width: 764px; /* Keeps the text from stretching too wide */
+    margin: 0 auto;
+  }
+
+  .hp-intro__text {
+    font-size: 30px; /* Match Figma size */
+    font-weight: 400; /* Light/Regular weight for this part */
+    line-height: 1.4;
+    color: #333333;
+    margin: 0;
+    letter-spacing: 0px;
+  }
+
+  /* --- Categories Section --- */
+  .hp-categories {
+    padding: 80px 0;
+  }
+
+  .hp-categories__header {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  /* --- The Card Grid --- */
+  .hp-categories__grid {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .category-card {
+    flex: 1; /* Makes all cards equal width */
+    min-width: 180px; /* Prevents cards from getting too squished */
+    text-align: center;
+  }
+
+  .category-card__image {
+    aspect-ratio: 4 / 5; /* Matches the vertical rectangle shape in Figma */
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px; /* Rounded corners like Figma */
+  }
+
+  .category-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image from stretching */
+    transition: transform 0.3s ease;
+  }
+
+  .category-card:hover img {
+    transform: scale(1.05); /* Nice hover effect */
+  }
+
+  .category-card__title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+  }
+
+  /* --- About --- */
+
+  .hp-about {
+    padding: 100px 0;
+    background-color: #ffffff;
+  }
+
+  .hp-about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Left side slightly narrower */
+    gap: 80px;
+    align-items: flex-start;
+  }
+
+  .hp-about__main-title {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .hp-about__main-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .hp-about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hp-about__feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .hp-about__feature-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .hp-about__link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.2s ease;
+  }
+
+  .hp-about__link .arrow {
+    margin-left: 8px;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .hp-about__link:hover {
+    color: var(--primary-red);
+  }
+
+  /* --- Services Section (Mit keresel?) --- */
+  .hp-services {
+    padding: 80px 0;
+    background-color: #ffffff;
+  }
+
+  .hp-services__header {
+    margin-bottom: 40px;
+  }
+
+  .hp-services__header .section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .hp-services__header .section-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .hp-services__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+  }
+
+  .service-card {
+    text-decoration: none; /* Remove underline from link */
+    display: block;
+  }
+
+  .service-card__image {
+    aspect-ratio: 1 / 1; /* Square images as seen in Figma */
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 4px; /* Slight rounding or square based on your preference */
+  }
+
+  .service-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .service-card:hover .service-card__image img {
+    transform: scale(1.03); /* Subtle zoom on hover */
+  }
+
+  .service-card__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
+  }
+
+  .service-card__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .service-card__link .arrow {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+
+  .service-card:hover .service-card__title {
+    color: var(--primary-red);
+  }
+
+  .service-card:hover .service-card__link .arrow {
+    transform: translateX(3px);
+  }
+
+  /* --- CTA Banner Section --- */
+  .hp-cta-banner {
+    padding: 60px 0;
+    background-color: #ffffff;
+  }
+
+  .hp-cta-banner__inner {
+    position: relative;
+    width: 100%;
+    padding: 80px 60px; /* Padding inside the banner */
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px; /* Rounded corners matching Figma */
+    overflow: hidden;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+
+  .hp-cta-banner__content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hp-cta-banner__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    opacity: 0.9;
+  }
+
+  .hp-cta-banner__title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+
+  /* Adjust button inside banner if needed */
+  .hp-cta-banner__actions .btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .hp-cta-banner__actions .btn {
+    display: inline-block;
+    background-color: #e31e24; /* Kompan Red */
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-main);
+    letter-spacing: 0.01em;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: none; /* Keep text as written */
+    margin-right: 15px;
+    transition: background 0.3s ease;
+  }
+}
+
+/* 
+============================================================
+MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
+============================================================
+*/
+
+/* --- Mobile / Tablet Scroll Slider --- */
+@media (max-width: 1024px) {
+  /* --- 1. Header Adjustment --- */
+  .hp-categories {
+    padding: 60px 0;
+    margin-left: 0 !important; /* Remove desktop margin */
+    overflow: hidden; /* Prevents horizontal scroll on the body */
+  }
+
+  .hp-categories__header {
+    margin-left: 24px;
+    margin-bottom: 30px;
+    padding-right: 24px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #666;
+  }
+
+  /* --- 2. The Slider Grid --- */
+  .hp-categories__grid {
+    display: flex;
+    flex-wrap: nowrap; /* Forces one single line */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    /* Spacing for "Peeking" effect */
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 23px;
+    margin-left: 23px;
+
+    /* Hide scrollbars */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hp-categories__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* --- 3. The Category Card --- */
+  .category-card {
+    flex: 0 0 65%; /* 65% width allows the second card to peek in from the right */
+    scroll-snap-align: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-card__image {
+    aspect-ratio: 4 / 5; /* Matches the tall rectangle shape in Image 7 */
+    border-radius: 20px; /* Big rounded corners like Figma */
+    margin-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .category-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .category-card__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-top: auto; /* Pushes text to bottom if heights vary */
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- 1. Hero Section Mobile --- */
+  .hp-hero {
+    display: flex;
+    align-items: center; /* Vertical center */
+    justify-content: center;
+    height: 85vh; /* Standard mobile hero height */
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hp-hero .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* --- 2. Fix Buttons (This is what broke in Image 5) --- */
+  .hp-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 30px; /* Space between title and buttons */
+  }
+
+  /* Force the button styling to apply specifically in mobile */
+  .hp-hero__actions .btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #e31e24 !important; /* Kompan Red */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.2;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+  }
+
+  .hp-hero__actions .btn:hover {
+    opacity: 0.9;
+    transform: none; /* Disable hover lift on mobile for better touch feel */
+  }
+
+  /* --- 3. Fix Typography --- */
+  .hp-hero__title {
+    font-size: 2.6rem !important;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .hp-hero__intro {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+
+  /* --- Intro Section Mobile ---*/
+
+  .hp-intro {
+    padding: 80px 24px; /* Generous white space above/below */
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .container--narrow {
+    max-width: 100%; /* Use full width on mobile */
+    margin: 0 auto;
+  }
+
+  .hp-intro__text {
+    font-size: 22px; /* Scales down from desktop 30px to mobile */
+    font-weight: 400; /* Keeps it clean and readable as per Figma */
+    line-height: 1.5;
+    color: #333333;
+    margin: 0;
+    letter-spacing: -0.01em; /* Slight tightening for modern look */
+  }
+
+  /* --- Categories Section Mobile --- */
+  .hp-categories {
+    padding: 60px 0;
+    margin-left: 0; /* Reset desktop 200px margin */
+  }
+
+  .hp-categories__header {
+    padding: 0 24px; /* Align titles with the intro text */
+    margin-left: 0;
+    margin-bottom: 30px;
+    text-align: left; /* Headers usually stay left even when intro is centered */
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #666;
+  }
+
+  /* --- About Section --- */
+  .hp-about {
+    padding: 60px 24px; /* Matches the padding of other sections */
+    background-color: #ffffff;
+  }
+
+  /* 1. Change grid to single column */
+  .hp-about__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between the main intro and the details below */
+  }
+
+  /* 2. Style the main heading and intro text */
+  .hp-about__main-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #111111;
+  }
+
+  .hp-about__main-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 10px;
+  }
+
+  /* 3. Style the detailed feature blocks */
+  .hp-about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Space between the two feature text blocks */
+  }
+
+  .hp-about__feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111111;
+  }
+
+  .hp-about__feature-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444444;
+  }
+
+  /* 4. Style the "Learn More" link */
+  .hp-about__link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  .hp-about__link .arrow {
+    margin-left: 8px;
+    font-size: 1.2rem;
+  }
+
+  /* --- Services Section (Mit keresel?) Mobile --- */
+  .hp-services {
+    padding: 60px 24px;
+    background-color: #ffffff;
+  }
+
+  .hp-services__header {
+    margin-bottom: 30px;
+    text-align: left; /* Keep titles left-aligned as per Figma */
+  }
+
+  /* 1. Stack the grid vertically */
+  .hp-services__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between the two large cards */
+  }
+
+  .service-card {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+  }
+
+  /* 2. Style the image container */
+  .service-card__image {
+    aspect-ratio: 1 / 1; /* Keep them square as seen in Image 9 */
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Subtle rounding */
+    overflow: hidden;
+  }
+
+  .service-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 3. Style the typography */
+  .service-card__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 8px;
+  }
+
+  .service-card__link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .service-card__link .arrow {
+    margin-left: 6px;
+    font-size: 1.2rem;
+  }
+
+  /* --- CTA Banner Section Mobile --- */
+  .hp-cta-banner {
+    padding: 40px 20px; /* Kevesebb margó a banner körül mobilone */
+  }
+
+  .hp-cta-banner__inner {
+    padding: 60px 30px; /* Belső térköz a szöveg körül */
+    border-radius: 20px; /* Erősebb lekerekítés mint desktopon, a Figma alapján */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1.1; /* Kicsit álló formátumú legyen mobilone */
+  }
+
+  .hp-cta-banner__content {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Gombot is középre rakja */
+    gap: 10px;
+  }
+
+  .hp-cta-banner__subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    opacity: 1; /* Jobb olvashatóság mobilone */
+    color: #ffffff;
+    letter-spacing: 0.1rem;
+  }
+
+  .hp-cta-banner__title {
+    font-size: 30px; /* Kisebb betűméret, hogy ne törjön szét */
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  /* --- CTA Gomb Mobilone --- */
+  .hp-cta-banner__actions {
+    width: 100%;
+  }
+
+  .hp-cta-banner__actions .btn {
+    width: 100%; /* Mobilone kényelmesebb a teljes szélességű gomb */
+    padding: 18px 20px;
+    font-size: 16px;
+    background-color: #e31e24;
+    border-radius: 12px;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* =========================================================================================================
+   |   CATEGORY PAGES ||
+============================================================================================================*/
+
+/* CATEGORY PAGE HERO */
+.category-hero {
+  aspect-ratio: 1664 / 700; /* Same proportions as the front-page image */
+  background-size: cover; /* Cover works better than contain for category pages */
+  background-position: center;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start; /* Content aligned left */
+  text-align: left;
+}
+
+.category-hero .container {
+  /* This ensures the content stays within the same grid as the rest of your site */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns the inner elements (p, h1, buttons) to the left */
+  padding-top: 380px;
+}
+
+.category-hero .hero-content {
+  max-width: 800px; /* Prevents the title from stretching across the whole screen */
+}
+
+.category-hero .hero-content p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.category-hero-h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.category-hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+.category-hero .hero-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.category-hero .hero-buttons .btn-red,
+.category-hero .hero-buttons .btn-outline {
+  background-color: #e30613; /* Kompan Red */
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-style: bold;
+  text-transform: none; /* Keep text as written */
+  margin-right: 15px;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.category-hero .hero-buttons .btn-red:visited,
+.category-hero .hero-buttons .btn-outline:visited {
+  color: #fff; /* ← Prevents purple visited color */
+  text-decoration: none; /* ← Prevents underline after clicking */
+}
+
+.category-hero .hero-buttons .btn-red:hover,
+.category-hero .hero-buttons .btn-outline:hover {
+  background-color: #b5050f; /* Darker red on hover */
+  color: #fff;
+}
+
+/* CONTENT SECTION */
+.category-intro {
+  padding: 80px 0; /* More space around the content */
+}
+
+.category-image-and-text-wrapper {
+  display: flex;
+  grid-template-columns: 7fr 5fr;
+  align-items: stretch;
+  gap: 60px; /* Responsive space between text and image */
+  margin: 0;
+}
+
+.category-image-and-text-wrapper .col-md-7,
+.category-image-and-text-wrapper .col-md-5 {
+  min-width: 0;
+}
+
+.category-image-and-text-wrapper .col-md-7 {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-image-and-text-wrapper .col-md-5 {
+  flex: 5;
+  display: flex;
+}
+
+.side-image-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.col-md-7-title {
+  font-weight: 600;
+  font-size: 36px;
+  color: #36393c;
+  line-height: 40px;
+  margin-bottom: 3rem;
+}
+
+.col-md-7-intro {
+  font-size: 20px;
+  font-weight: 600;
+  color: #36393c;
+  line-height: 1.5;
+}
+
+.acf-description-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #36393c;
+  line-height: 1.6;
+}
+.intro-body strong,
+.intro-body p:nth-child(2) {
+  font-weight: 700;
+  color: #333;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.side-image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px; /* Matching the Figma rounded corners */
+}
+
+@media (max-width: 768px) {
+  .category-hero {
+    height: 100svh; /* Full viewport height on mobile */
+    min-height: 500px;
+    align-items: flex-end; /* Push content to the BOTTOM */
+    padding-bottom: 40px; /* Space from the very bottom edge */
+  }
+
+  .category-hero .container {
+    width: 100%;
+    padding: 0 20px; /* Side padding so buttons don't touch edges */
+  }
+
+  .category-hero .hero-content {
+    max-width: 100%; /* Full width on mobile */
+    width: 100%;
+  }
+
+  .category-hero-h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+
+  .category-hero h1 {
+    font-size: 36px; /* Slightly smaller on mobile */
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  /* Full-width stacked buttons */
+  .category-hero .hero-buttons {
+    flex-direction: column; /* Stack vertically */
+    gap: 12px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .category-hero .hero-buttons .btn-red,
+  .category-hero .hero-buttons .btn-outline {
+    width: 100%; /* Full width */
+    text-align: center;
+    margin-right: 0; /* Remove desktop right margin */
+    padding: 16px 20px; /* Bigger tap target */
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .category-image-and-text-wrapper {
+    display: flex !important;
+    flex-direction: column !important; /* Text on top, image below */
+    gap: 32px;
+    margin: 0 !important; /* Kill the 80px desktop margin */
+  }
+
+  /* 2. Text column full width */
+  .category-image-and-text-wrapper .col-md-7 {
+    flex: none !important;
+    width: 100% !important;
+    padding: 0 20px;
+  }
+
+  /* 3. Image column full width, BELOW text */
+  .category-image-and-text-wrapper .col-md-5 {
+    flex: none !important;
+    width: 100% !important;
+    padding: 0 20px;
+  }
+
+  /* 4. Fix the blue link color bleeding into text */
+  .category-intro a,
+  .acf-description-text a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* 5. Title sizing */
+  .col-md-7-title {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+
+  /* 6. Subtitle */
+  .col-md-7-intro {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 1rem;
+  }
+
+  /* 7. Body text - kill blue link styles */
+  .acf-description-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #36393c !important;
+  }
+
+  .acf-description-text * {
+    color: #36393c !important; /* Force all child elements to dark color */
+    text-decoration: none !important; /* Remove any underlines */
+  }
+
+  /* 8. Image */
+  .side-image-wrapper {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .side-image-wrapper img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}

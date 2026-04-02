@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build files
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+
+# Log files
+*.log
+error_log
+
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+
+# LocalWP specific
+*.sql
+*.zip
