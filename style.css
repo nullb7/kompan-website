@@ -651,7 +651,6 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
 }
 
 .main-navigation ul {
@@ -1015,10 +1014,6 @@ html {
   display: none;
 }
 
-#site-navigation {
-  display: none; /* Hides the default menu since we don't have a mobile menu set up yet */
-}
-
 /* Hide the default site title and description */
 .site-title,
 .site-description {
@@ -1044,16 +1039,6 @@ html {
   margin: 0;
 }
 
-.hp-hero {
-  display: flex;
-  position: relative;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #ffffff;
-}
-
 .container {
   max-width: 1200px; /* Adjust this to match your Figma frame width */
   margin: 0 auto;
@@ -1061,6 +1046,303 @@ html {
 
 .hp-hero__inner {
   width: 100%;
+}
+
+/* =========================================================================================================
+   |   NAVBAR ||
+============================================================================================================*/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 70px;
+}
+
+/* --- Logo --- */
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo-text {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #e31e24;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* --- Center Nav Menu --- */
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-menu li a:hover {
+  background-color: #f5f5f5;
+  color: #e31e24;
+}
+
+/* Kinek szol dropdown chevron */
+
+.nav-menu > li.menu-item-has-children > a::after {
+  content: "∨";
+  font-size: 0.7rem;
+  margin-left: 4px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+/* Rotate arrow when hovering */
+.nav-menu > li.menu-item-has-children:hover > a::after {
+  transform: rotate(180deg);
+}
+
+/* --- Dropdowns --- */
+.nav-menu .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  min-width: 200px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 100;
+}
+
+.nav-menu li:hover .sub-menu {
+  display: block;
+}
+
+.nav-menu .sub-menu li a {
+  padding: 10px 20px;
+  border-radius: 0;
+  font-size: 0.9rem;
+}
+
+.nav-menu .sub-menu li a:hover {
+  background-color: #f5f5f5;
+}
+
+/* --- Right Actions --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.nav-search-toggle:hover {
+  color: #e31e24;
+}
+
+/* Search Bar */
+.nav-search-bar {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  padding: 16px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav-search-bar.active {
+  display: block;
+}
+
+.nav-search-bar form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+.nav-search-bar input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid #e31e24;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.nav-search-bar button {
+  padding: 10px 20px;
+  background: #e31e24;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Kapcsolat Button */
+.btn-nav {
+  background-color: #e31e24;
+  color: #ffffff !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-nav:hover {
+  opacity: 0.9;
+}
+
+/* --- Hamburger --- */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Hamburger open state */
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Mobile Menu --- */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 16px 24px 24px;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-nav-menu li a {
+  display: block;
+  padding: 12px 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-menu li a:hover {
+  color: #e31e24;
+}
+
+.mobile-kapcsolat {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  .main-navigation {
+    display: none; /* Hide desktop menu */
+  }
+
+  .btn-nav:not(.mobile-kapcsolat) {
+    display: none; /* Hide desktop Kapcsolat button */
+  }
+
+  .nav-hamburger {
+    display: flex; /* Show hamburger */
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
 }
 
 /* =========================================================================================================
@@ -1076,19 +1358,21 @@ html {
 @media (min-width: 768px) {
   /* --- Hero Section --- */
   .hp-hero {
-    aspect-ratio: 1664 / 700; /* Same proportions as the front-page image */
+    aspect-ratio: unset; /* Same proportions as the front-page image */
+    overflow: visable;
+    min-height: 500px; /* Ensures it doesn't get too short on smaller screens */
+    height: auto;
+    padding: 80px 0; /* Adds vertical padding to give more space around the text */
     background-size: cover; /* Cover works better than contain for category pages */
-    background-position: center;
+    background-position: top center;
+    background-repeat: no-repeat;
     background-color: #000000;
+    align-items: center;
     display: flex;
     align-items: center;
-    color: #ffffff;
-    overflow: hidden;
     position: relative;
     width: 100%;
-    background-size: contain; /* Keep contain for front-page if that's intentional */
-    background-position: top center;
-    align-items: center;
+    color: #f0f0f0;
   }
 
   /* Dark overlay for readability */
@@ -1117,7 +1401,7 @@ html {
 
   /* --- 3. Hero Text --- */
   .hp-hero__intro {
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-bottom: 10px;
     font-weight: 400;
     letter-spacing: 0.35px;
@@ -1127,18 +1411,19 @@ html {
     font-weight: 700;
     line-height: 1.1;
     font-style: bold;
-    margin-bottom: 30px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    font-size: 4.5rem; /* Large and impactful */
+    font-size: 60px; /* Large and impactful */
     letter-spacing: 0em; /* Tighter spacing for headlines */
     font-family: var(--font-main);
     margin-top: 0;
+    margin-bottom: 0px;
   }
 
   /* --- 4. Buttons --- */
   .hp-hero__actions {
     display: flex;
     gap: 10px;
+    margin-top: 50px;
   }
 
   .hp-hero__actions .btn {
@@ -1216,6 +1501,8 @@ html {
     flex: 1; /* Makes all cards equal width */
     min-width: 180px; /* Prevents cards from getting too squished */
     text-align: center;
+    color: inherit;
+    text-decoration: none;
   }
 
   .category-card__image {
@@ -1234,6 +1521,11 @@ html {
 
   .category-card:hover img {
     transform: scale(1.05); /* Nice hover effect */
+  }
+
+  .category-card:focus-visible {
+    outline: 2px solid #c62828;
+    outline-offset: 4px;
   }
 
   .category-card__title {
@@ -1520,6 +1812,8 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     text-align: center;
     display: flex;
     flex-direction: column;
+    color: inherit;
+    text-decoration: none;
   }
 
   .category-card__image {
@@ -1548,17 +1842,19 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   /* --- 1. Hero Section Mobile --- */
   .hp-hero {
     display: flex;
-    align-items: center; /* Vertical center */
+    align-items: flex-end; /* Push content to BOTTOM like category-hero */
     justify-content: center;
-    height: 85vh; /* Standard mobile hero height */
-    padding: 40px 20px;
+    height: 100svh; /* Full viewport height like category-hero */
+    min-height: 500px;
+    padding-bottom: 40px; /* Space from bottom like category-hero */
     background-size: cover;
     background-position: center;
   }
 
   .hp-hero .container {
     margin: 0;
-    padding: 0;
+    padding-top: 0; /* Remove the 200px that was pushing content down */
+    padding: 0 20px; /* Match category-hero side padding */
     width: 100%;
   }
 
@@ -1854,6 +2150,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   width: 100%;
   justify-content: flex-start; /* Content aligned left */
   text-align: left;
+  background-repeat: no-repeat;
 }
 
 .category-hero .container {
@@ -2116,5 +2413,115 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+  }
+}
+
+/* =========================================================================================================
+   |   ROLUNK ||
+============================================================================================================*/
+/* ── Rólunk Images Row ── */
+.rolunk-images {
+  padding: 60px 0;
+}
+
+.rolunk-images__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.rolunk-images__item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.rolunk-images__item--tall img {
+  height: 320px;
+}
+
+/* ── Cégtörténet + Szakértő ── */
+.rolunk-text {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.rolunk-text__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.rolunk-text__title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.rolunk-text__col p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.rolunk-text__title-nextcol {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ── Honnan indultunk ── */
+.rolunk-origin {
+  padding: 60px 0;
+}
+
+.rolunk-origin__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.rolunk-origin__image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.rolunk-origin__title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.rolunk-origin__subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 20px 0 8px;
+}
+
+.rolunk-origin__content p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .rolunk-images__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rolunk-text__grid,
+  .rolunk-origin__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }

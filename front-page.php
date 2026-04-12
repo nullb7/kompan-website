@@ -56,22 +56,22 @@ $hero_subtitle = get_field('hero_subtitle');
             // We'll hardcode these for now to see the design, 
             // then we can make them dynamic with ACF!
             $categories = [
-                ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-3.jpg', 'title' => 'Bölcsődék-Óvodák'],
-                ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-4.jpg', 'title' => 'Iskolák'],
-                ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-5.jpg', 'title' => 'Lakóközösségek'],
-                ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-6.jpg', 'title' => 'Vállalatok'],
-                ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-7.jpg', 'title' => 'Tervezők'],
-                ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-8.jpg', 'title' => 'Önkormányzatok'],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-3.jpg', 'title' => 'Bölcsődék-Óvodák', 'link' => home_url('/bolcsode-ovi/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-4.jpg', 'title' => 'Iskolák', 'link' => home_url('/iskolak/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-5.jpg', 'title' => 'Lakóközösségek', 'link' => home_url('/lakokozzosegek/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-6.jpg', 'title' => 'Vállalatok', 'link' => home_url('/vallalatok/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-7.jpg', 'title' => 'Tervezők', 'link' => home_url('/tervezok/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-8.jpg', 'title' => 'Önkormányzatok', 'link' => home_url('/onkormanyzatok/')],
             ];
 
             foreach ($categories as $cat) : ?>
-                <div class="category-card">
+              <a class="category-card" href="<?php echo esc_url($cat['link']); ?>">
                     <div class="category-card__image">
                         <!-- Replace with your actual image URLs later -->
                         <img src="<?php echo esc_url($cat['img']); ?>" alt="<?php echo esc_html($cat['title']); ?>">                    
                     </div>                    
-                    <h3 class="category-card__title"><?php echo $cat['title']; ?></h3>
-                </div>
+                <h3 class="category-card__title"><?php echo esc_html($cat['title']); ?></h3>
+              </a>
             <?php endforeach; ?>
         </div>
 

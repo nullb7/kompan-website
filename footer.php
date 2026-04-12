@@ -29,6 +29,22 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+	<script>
+// Hamburger toggle
+const hamburger = document.getElementById('navHamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const searchToggle = document.querySelector('.nav-search-toggle');
+const searchBar = document.getElementById('navSearchBar');
 
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobileMenu.classList.toggle('active');
+	hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
+});
+
+searchToggle.addEventListener('click', () => {
+	searchBar.classList.toggle('active');
+});
+</script>
 </body>
 </html>
