@@ -1844,11 +1844,12 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     display: flex;
     align-items: flex-end; /* Push content to BOTTOM like category-hero */
     justify-content: center;
-    height: 100svh; /* Full viewport height like category-hero */
-    min-height: 500px;
+    min-height: 100svh; /* Full viewport height like category-hero */
     padding-bottom: 40px; /* Space from bottom like category-hero */
     background-size: cover;
     background-position: center;
+    overflow: visable;
+    height: auto;
   }
 
   .hp-hero .container {
@@ -2517,6 +2518,15 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 @media (max-width: 768px) {
   .rolunk-images__grid {
     grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .rolunk-text {
+    padding: 40px 20px;
+  }
+
+  .rolunk-origin__grid {
+    padding: 40px 20px;
   }
 
   .rolunk-text__grid,
