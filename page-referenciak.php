@@ -142,6 +142,7 @@ get_header();
     <div class="container">
       <h2 class="ref-map__title">Munkaink</h2>
       <div class="ref-map__embed">
+        <!-- NOTE: Google maps link kell ide! -->
         <iframe
           src="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID"
           width="100%"
@@ -155,29 +156,37 @@ get_header();
   </section>
 
   <!-- INSPIRÁCIÓ GRID -->
-  <section class="ref-inspiracio">
-    <div class="container">
-      <h2 class="ref-inspiracio__title">Inspiráció</h2>
-      <div class="ref-inspiracio__grid">
+  <?php
+$inspiracio_col1 = [
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 1', 'tags' => ['Jatek', 'Kozossegi']],
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 2', 'tags' => ['Jatek']],
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 3', 'tags' => ['Megrendeles']],
+];
 
-        <?php
-        // Hardcoded for now - can be made dynamic with ACF later
-        $inspiracio_items = [
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp1.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp2.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp3.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp4.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp5.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp6.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp7.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp8.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-          ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/insp9.jpg', 'title' => 'Előkészítés', 'tags' => ['Jatek', 'Kozossegi', 'Megrendeles']],
-        ];
+$inspiracio_col2 = [
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 4', 'tags' => ['Jatek', 'Kozossegi']],
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 5', 'tags' => ['Jatek']],
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 6', 'tags' => ['Megrendeles']],
+];
 
-        foreach ($inspiracio_items as $item) : ?>
+$inspiracio_col3 = [
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 7', 'tags' => ['Jatek', 'Kozossegi']],
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 8', 'tags' => ['Jatek']],
+  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 9', 'tags' => ['Megrendeles']],
+];
+?>
+
+<section class="ref-inspiracio">
+  <div class="container">
+    <h2 class="ref-inspiracio__title">Inspiráció</h2>
+    <div class="insp-masonry">
+
+      <!-- Left column -->
+      <div class="insp-masonry__col">
+        <?php foreach ($inspiracio_col1 as $item) : ?>
           <div class="insp-card">
-            <div class="insp-card__image">
-              <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_html($item['title']); ?>">
+            <div class="insp-card__img-wrap insp-card__img-wrap--short">
+              <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_html($item['title']); ?>" class="insp-card__img insp-card__img--short">
             </div>
             <h3 class="insp-card__title"><?php echo esc_html($item['title']); ?></h3>
             <div class="insp-card__tags">
@@ -187,10 +196,45 @@ get_header();
             </div>
           </div>
         <?php endforeach; ?>
-
       </div>
+
+      <!-- Middle column — card is tall -->
+      <div class="insp-masonry__col">
+        <?php foreach ($inspiracio_col2 as $item) : ?>
+          <div class="insp-card">
+            <div class="insp-card__img-wrap insp-card__img-wrap--tall">
+              <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_html($item['title']); ?>" class="insp-card__img insp-card__img--tall">
+            </div>
+            <h3 class="insp-card__title"><?php echo esc_html($item['title']); ?></h3>
+            <div class="insp-card__tags">
+              <?php foreach ($item['tags'] as $tag) : ?>
+                <span class="insp-card__tag"><?php echo esc_html($tag); ?></span>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
+      <!-- Right column -->
+      <div class="insp-masonry__col">
+        <?php foreach ($inspiracio_col3 as $item) : ?>
+          <div class="insp-card">
+            <div class="insp-card__img-wrap insp-card__img-wrap--short">
+              <img src="<?php echo esc_url($item['img']); ?>" alt="<?php echo esc_html($item['title']); ?>" class="insp-card__img insp-card__img--short">
+            </div>
+            <h3 class="insp-card__title"><?php echo esc_html($item['title']); ?></h3>
+            <div class="insp-card__tags">
+              <?php foreach ($item['tags'] as $tag) : ?>
+                <span class="insp-card__tag"><?php echo esc_html($tag); ?></span>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
