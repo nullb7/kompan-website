@@ -2434,13 +2434,8 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
 .rolunk-images__item img {
   width: 100%;
-  height: 250px;
   object-fit: cover;
-  border-radius: 8px;
-}
-
-.rolunk-images__item--tall img {
-  height: 320px;
+  border-radius: 30px;
 }
 
 /* ── Cégtörténet + Szakértő ── */
@@ -2452,7 +2447,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 .rolunk-text__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 30px;
 }
 
 .rolunk-text__title {
@@ -2515,12 +2510,39 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 /* ── Mobile ── */
-@media (max-width: 768px) {
-  .rolunk-images__grid {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .rolunk-images {
     padding: 40px 20px;
+    margin-left: 0 !important;
+    overflow: hidden;
   }
 
+  .rolunk-images__grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .rolunk-images__item {
+    flex: 0 0 80%; /* 65% width allows the second card to peek in from the right */
+    scroll-snap-align: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.rolunk-images__grid::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .rolunk-text {
     padding: 40px 20px;
   }
@@ -2533,5 +2555,219 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   .rolunk-origin__grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+}
+
+/* =========================================================================================================
+   |   REFERENCIAK ||
+============================================================================================================*/
+
+/* ── Biztonságos Használat ── */
+.ref-biztonsag {
+  padding: 60px 0;
+}
+
+.ref-biztonsag__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.ref-biztonsag__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.ref-biztonsag__col p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ── Kiknek Segítünk ── */
+.ref-kiknek {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.ref-kiknek__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.ref-kiknek__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.ref-kiknek__subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.ref-kiknek__content p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.ref-kiknek__image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ── Szolgáltatási Kör ── */
+.ref-szolgaltatas {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.ref-szolgaltatas__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #1a1a1a;
+}
+
+.ref-szolgaltatas__grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* .ref-szolgaltatas__grid::-webkit-scrollbar {
+  display: none;
+} */
+
+.ref-szolg-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.ref-szolg-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.ref-szolg-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ref-szolg-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.ref-szolg-card__text {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ── Map ── */
+.ref-map {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.ref-map__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.ref-map__embed iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* ── Inspiráció Grid ── */
+.ref-inspiracio {
+  padding: 60px 0;
+}
+
+.ref-inspiracio__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #1a1a1a;
+}
+
+.ref-inspiracio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.insp-card__image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.insp-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.insp-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.insp-card__tag {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  color: #555;
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .ref-biztonsag__grid,
+  .ref-kiknek__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ref-szolgaltatas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ref-inspiracio__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
