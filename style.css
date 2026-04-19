@@ -998,7 +998,7 @@ h6,
 /* --- 1. Global Layout --- */
 
 html {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 .site-header {
@@ -2574,16 +2574,17 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .ref-biztonsag__title {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 600;
   margin-bottom: 20px;
-  color: #1a1a1a;
+  color: #36393c;
+  line-height: 2.5rem;
 }
 
 .ref-biztonsag__col p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #444;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #36393c;
 }
 
 /* ── Kiknek Segítünk ── */
@@ -2600,24 +2601,25 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .ref-kiknek__title {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 600;
   margin-bottom: 16px;
-  color: #1a1a1a;
+  color: #36393c;
 }
 
 .ref-kiknek__subtitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #36393c;
 }
 
 .ref-kiknek__content p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #444;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #36393c;
   margin-bottom: 16px;
+  margin-top: auto;
 }
 
 .ref-kiknek__image img {
@@ -2633,10 +2635,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .ref-szolgaltatas__title {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 600;
   margin-bottom: 32px;
-  color: #1a1a1a;
+  color: #36393c;
 }
 
 .ref-szolgaltatas__grid {
@@ -2676,16 +2678,18 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .ref-szolg-card__title {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 8px;
-  color: #1a1a1a;
+  margin-top: 5px;
+  color: #36393c;
 }
 
 .ref-szolg-card__text {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: #555;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #36393c;
+  margin-top: auto;
 }
 
 /* ── Map ── */
@@ -2695,10 +2699,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .ref-map__title {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 600;
   margin-bottom: 24px;
-  color: #1a1a1a;
+  color: #36393c;
 }
 
 .ref-map__embed iframe {
@@ -2714,10 +2718,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .ref-inspiracio__title {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 600;
   margin-bottom: 32px;
-  color: #1a1a1a;
+  color: #36393c;
 }
 
 .insp-masonry {
@@ -2756,6 +2760,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .insp-card:hover .insp-card__img {
+  cursor: pointer;
   transform: scale(1.05);
 }
 
@@ -2772,10 +2777,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .insp-card__title {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 8px;
-  color: #1a1a1a;
+  color: #36393c;
 }
 
 .insp-card__tags {
@@ -2796,6 +2801,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .insp-card__tag:hover {
+  cursor: pointer;
   background-color: #e8e8e8; /* ← slightly gray */
   border-color: #bbb;
 }

@@ -44,6 +44,8 @@ get_header();
         </div>
       </div>
     </div>
+
+    
   </section>
 
   <!-- KIKNEK SEGÍTÜNK -->
@@ -67,6 +69,24 @@ get_header();
         <div class="ref-kiknek__image">
           <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/Rectangle-2.jpg" alt="Kiknek segítünk">
         </div>
+
+        <!-- Left: Image -->
+        <div class="ref-kiknek__image">
+          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/Rectangle-3.jpg" alt="Kiknek segítünk2">
+        </div>
+
+        <!-- Right Text -->
+        <div class="ref-kiknek__content">
+          <h3 class="ref-kiknek__subtitle">Mindenkinek tervezve, általad inspirálva</h3>
+
+          <p><strong>Tanusítás:</strong> A KOMPAN gyártási és értékesítési folyamatai kidolgozott rendszer szerint működnek, valamint képviseletünk ISO 9001 minőségtanúsítási-, ISO 14001 környezetközpontú irányítási-, és ISO 28001 munkahelyi egészségvédelem és biztonság irányításirendszer szerint tanúsított.
+          Az általunk forgalmazott valamennyi berendezés megfelel az MSZ EN 1176. sz. szabvány vonatkozó fejezeteiben meghatározottaknak. A szabványnak való megfelelést minden egyes játszószer esetében a független TÜV laboratóriumaiban kiállított jegyzőkönyvek tanúsítják</p>
+
+          <p><strong>Pályázatok:</strong> Figyelemmel kísérjük az ügyfeleink számára alkalmas pályázati lehetőségeket. Igény szerint biztosítjuk a közbeszerzési pályázatok előkészítéséhez szükséges játszóeszköz dokumentációkat, lehetőség szerint megelőzve a pályázati felhívást, hiszen adott esetben jelentős helyzeti előnyt biztosít, ha a pályázati lehetőség megjelenésekor kész játszótér dokumentáció áll rendelkezésre. Stabil hátteret ad az időben egyeztetett, kidolgozott, a döntéshozók, polgármesteri hivatal esetében a képviselő testület által jóváhagyott költségvetés és előzetes tervek megléte, amelyeket adott esetben rugalmasan módosítunk a pályázati előírásoknak és lehetőségeknek megfelelően. A tervezett játszótér területének felmérése és előzetes terveinek, költségvetésének készítése díjmentes.</p>
+
+          <p>Az általunk forgalmazott berendezések szerepelnek a Mezőgazdasági és Vidékfejlesztési Hivatal (MVH) Összevont Építőipari Normarendszer (ÖN) adatbázisát tartalmazó ÉNGY adatállományban, így Leader pályázatok keretében támogatás igényelhető rájuk.</p>
+        </div>
+
 
       </div>
     </div>
@@ -176,6 +196,7 @@ $inspiracio_col3 = [
 ];
 ?>
 
+<!-- NOTE: Pills lead to categories list of termékek -->
 <section class="ref-inspiracio">
   <div class="container">
     <h2 class="ref-inspiracio__title">Inspiráció</h2>
