@@ -160,18 +160,20 @@ get_header();
   <!-- MUNKAINK - MAP -->
   <section class="ref-map">
     <div class="container">
-      <h2 class="ref-map__title">Munkaink</h2>
-      <div class="ref-map__embed">
-        <!-- NOTE: Google maps link kell ide! -->
-        <iframe
-          src="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID"
-          width="100%"
-          height="500"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-      </div>
+      <div class="ref-map__wrap">
+        <h2 class="ref-map__title">Munkaink</h2>
+        <div class="ref-map__embed">
+          <!-- NOTE: Google maps link kell ide! -->
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID"
+            width="100%"
+            height="500"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>    
     </div>
   </section>
 
@@ -199,6 +201,7 @@ $inspiracio_col3 = [
 <!-- NOTE: Pills lead to categories list of termékek -->
 <section class="ref-inspiracio">
   <div class="container">
+    <div class="ref-inspiracio__wrap">
     <h2 class="ref-inspiracio__title">Inspiráció</h2>
     <div class="insp-masonry">
 
@@ -253,6 +256,7 @@ $inspiracio_col3 = [
         <?php endforeach; ?>
       </div>
 
+    </div>
     </div>
   </div>
 </section>
