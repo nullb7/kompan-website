@@ -184,3 +184,60 @@ function playgroundtheme_google_fonts() {
 	wp_enqueue_style( 'figtree-font', 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;900&display=swap', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'playgroundtheme_google_fonts' );
+
+// Enqueue Termekek scripts and styles
+function enqueue_termekek_assets() {
+    if (is_page_template('page-termekek.php')) {
+        wp_enqueue_style('termekek-style', get_template_directory_uri() . '/css/termekek.css');
+        wp_enqueue_script('termekek-script', get_template_directory_uri() . '/js/termekek.js', [], null, true);
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_termekek_assets');
+
+// AJAX handler for products
+function get_termekek_ajax() {
+    $category = sanitize_text_field($_POST['category'] ?? 'all');
+    $page     = intval($_POST['page'] ?? 1);
+    $per_page = 12;
+
+    $args = [
+        'post_type'      => 'product',
+        'posts_per_page' => $per_page,
+        'paged'          => $page,
+        'post_status'    => 'publish',
+    ];
+
+    if ($category !== 'all') {
+        $args['tax_query'] = [[
+            'taxonomy' => 'product_cat',
+            'field'    => 'slug',
+            'terms'    => $category,
+        ]];
+    }
+
+    $query = new WP_Query($args);
+    $total = $query->found_posts;
+    $pages = ceil($total / $per_page);
+    $products = [];
+
+    while ($query->have_posts()) {
+        $query->the_post();
+        $id = get_the_ID();
+        $products[] = [
+            'id'    => $id,
+            'title' => get_the_title(),
+            'url'   => get_permalink(),
+            'image' => get_the_post_thumbnail_url($id, 'medium') ?: wc_placeholder_img_src(),
+        ];
+    }
+
+    wp_reset_postdata();
+
+    wp_send_json([
+        'products' => $products,
+        'total'    => $total,
+        'pages'    => $pages,
+    ]);
+}
+add_action('wp_ajax_get_termekek', 'get_termekek_ajax');
+add_action('wp_ajax_nopriv_get_termekek', 'get_termekek_ajax');

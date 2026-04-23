@@ -26,45 +26,47 @@ get_header();
 
       <!-- Right: Contact Info + Map -->
       <div class="kapcsolat-info-wrap">
-        <h2 class="kapcsolat-block__title">Lépj kapcsolatba velünk!</h2>
-
-        <ul class="kapcsolat-info-list">
-
-          <?php $telefon = get_field('kapcsolat_telefon'); if ($telefon) : ?>
-            <li class="kapcsolat-info-item">
-              <span class="kapcsolat-info-icon"></span>
-              <div>
-                <strong>Telefon</strong>
-                <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $telefon)); ?>">
-                  <?php echo esc_html($telefon); ?>
-                </a>
+        <div class="kapcsolat-form-wrap">
+          <h2 class="kapcsolat-block__title">Lépj kapcsolatba velünk!</h2>
+          
+          <ul class="kapcsolat-info-list">
+            
+            <?php $telefon = get_field('kapcsolat_telefon'); if ($telefon) : ?>
+              <li class="kapcsolat-info-item">
+                <span class="kapcsolat-info-icon"></span>
+                <div>
+                  <strong>Telefon</strong>
+                  <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $telefon)); ?>">
+                    <?php echo esc_html($telefon); ?>
+                  </a>
+                </div>
+              </li>
+              <?php endif; ?>
+              
+              <?php $email = get_field('kapcsolat_email'); if ($email) : ?>
+                <li class="kapcsolat-info-item">
+                  <span class="kapcsolat-info-icon"></span>
+                  <div>
+                    <strong>Email</strong>
+                    <a href="mailto:<?php echo esc_attr($email); ?>">
+                      <?php echo esc_html($email); ?>
+                    </a>
+                  </div>
+                </li>
+                <?php endif; ?>
+                
+                <?php $cim = get_field('kapcsolat_cim'); if ($cim) : ?>
+                  <li class="kapcsolat-info-item">
+                    <span class="kapcsolat-info-icon"></span>
+                    <div>
+                      <strong>Cím</strong>
+                      <span><?php echo esc_html($cim); ?></span>
+                    </div>
+                  </li>
+                  <?php endif; ?>
+                  
+                </ul>
               </div>
-            </li>
-          <?php endif; ?>
-
-          <?php $email = get_field('kapcsolat_email'); if ($email) : ?>
-            <li class="kapcsolat-info-item">
-              <span class="kapcsolat-info-icon"></span>
-              <div>
-                <strong>Email</strong>
-                <a href="mailto:<?php echo esc_attr($email); ?>">
-                  <?php echo esc_html($email); ?>
-                </a>
-              </div>
-            </li>
-          <?php endif; ?>
-
-          <?php $cim = get_field('kapcsolat_cim'); if ($cim) : ?>
-            <li class="kapcsolat-info-item">
-              <span class="kapcsolat-info-icon"></span>
-              <div>
-                <strong>Cím</strong>
-                <span><?php echo esc_html($cim); ?></span>
-              </div>
-            </li>
-          <?php endif; ?>
-
-        </ul>
 
         <div class="kapcsolat-map">
           <iframe
