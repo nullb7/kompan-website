@@ -196,9 +196,10 @@ add_action('wp_enqueue_scripts', 'enqueue_termekek_assets');
 
 // AJAX handler for products
 function get_termekek_ajax() {
-    $category = sanitize_text_field($_POST['category'] ?? 'all');
-    $page     = intval($_POST['page'] ?? 1);
-    $per_page = 12;
+    $categories = isset($_POST['category']) ? (array) $_POST['category'] : ['all'];
+    $categories = array_map('sanitize_text_field', $categories);
+    $page       = intval($_POST['page'] ?? 1);
+    $per_page   = 12;
 
     $args = [
         'post_type'      => 'product',
@@ -207,14 +208,19 @@ function get_termekek_ajax() {
         'post_status'    => 'publish',
     ];
 
-    if ($category !== 'all') {
+    // Filter out 'all' and only add tax_query if real categories exist
+    $filtered = array_filter($categories, fn($c) => $c !== 'all');
+
+    if (!empty($filtered)) {
         $args['tax_query'] = [[
             'taxonomy' => 'product_cat',
             'field'    => 'slug',
-            'terms'    => $category,
+            'terms'    => array_values($filtered), // ← array of slugs
+            'operator' => 'IN', // ← match ANY of the selected categories
         ]];
     }
 
+		/* database query */
     $query = new WP_Query($args);
     $total = $query->found_posts;
     $pages = ceil($total / $per_page);
