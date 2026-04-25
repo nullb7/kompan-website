@@ -101,7 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = pill ? pill.textContent.trim() : cat;
         return `
         <span class="active-filter-tag" data-category="${cat}">
-          <button class="remove-filter">×</button>
+          <button class="remove-filter"><svg width="9" height="9" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.095 5.685L0.723333 10.0567C0.645556 10.1344 0.55 10.1761 0.436666 10.1817C0.323333 10.1872 0.222222 10.1456 0.133333 10.0567C0.0444443 9.96778 0 9.86944 0 9.76167C0 9.65389 0.0444443 9.55556 0.133333 9.46667L4.505 5.095L0.133333 0.723333C0.0555554 0.645556 0.0138887 0.55 0.00833313 0.436666C0.00277757 0.323333 0.0444443 0.222222 0.133333 0.133333C0.222222 0.0444443 0.320556 0 0.428333 0C0.536111 0 0.634444 0.0444443 0.723333 0.133333L5.095 4.505L9.46667 0.133333C9.54445 0.0555554 9.64028 0.0138887 9.75417 0.00833313C9.86694 0.00277757 9.96778 0.0444443 10.0567 0.133333C10.1456 0.222222 10.19 0.320556 10.19 0.428333C10.19 0.536111 10.1456 0.634444 10.0567 0.723333L5.685 5.095L10.0567 9.46667C10.1344 9.54445 10.1761 9.64028 10.1817 9.75417C10.1872 9.86694 10.1456 9.96778 10.0567 10.0567C9.96778 10.1456 9.86944 10.19 9.76167 10.19C9.65389 10.19 9.55556 10.1456 9.46667 10.0567L5.095 5.685Z" fill="black"/>
+            </svg>
+          </button>
           ${name}
         </span>
       `;
@@ -114,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="termekek-clear">Összes törlése</button>
     `;
 
-    // ✅ querySelectorAll not querySelector
     meta.querySelectorAll(".remove-filter").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const tag = e.target.closest(".active-filter-tag");

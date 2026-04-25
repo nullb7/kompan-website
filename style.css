@@ -3155,10 +3155,13 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   line-height: 1;
 }
 
+.active-filter-tag svg {
+  margin-bottom: 2px;
+}
+
 .termekek-clear {
   background: none;
   border: none;
-  color: #e63329;
   cursor: pointer;
   cursor: pointer;
   font-size: 0.9rem;
@@ -3172,6 +3175,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 40px;
+  column-gap: 50px;
 }
 
 .termek-card {
