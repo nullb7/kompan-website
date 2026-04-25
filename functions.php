@@ -202,7 +202,7 @@ function get_termekek_ajax() {
     $per_page   = 12;
 
     $args = [
-        'post_type'      => 'product',
+        'post_type'      => 'termek',
         'posts_per_page' => $per_page,
         'paged'          => $page,
         'post_status'    => 'publish',
@@ -213,7 +213,7 @@ function get_termekek_ajax() {
 
     if (!empty($filtered)) {
         $args['tax_query'] = [[
-            'taxonomy' => 'product_cat',
+            'taxonomy' => 'termek_kat',
             'field'    => 'slug',
             'terms'    => array_values($filtered), // ← array of slugs
             'operator' => 'IN', // ← match ANY of the selected categories
@@ -233,7 +233,7 @@ function get_termekek_ajax() {
             'id'    => $id,
             'title' => get_the_title(),
             'url'   => get_permalink(),
-            'image' => get_the_post_thumbnail_url($id, 'medium') ?: wc_placeholder_img_src(),
+            'image' => get_the_post_thumbnail_url($id, 'medium')
         ];
     }
 
@@ -247,3 +247,42 @@ function get_termekek_ajax() {
 }
 add_action('wp_ajax_get_termekek', 'get_termekek_ajax');
 add_action('wp_ajax_nopriv_get_termekek', 'get_termekek_ajax');
+
+// Register Termek Custom Post Type
+function register_termek_post_type() {
+    register_post_type('termek', [
+        'labels' => [
+            'name'          => 'Termékek',
+            'singular_name' => 'Termék',
+            'add_new'       => 'Új termék',
+            'add_new_item'  => 'Új termék hozzáadása',
+            'edit_item'     => 'Termék szerkesztése',
+            'view_item'     => 'Termék megtekintése',
+            'all_items'     => 'Összes termék',
+        ],
+        'public'        => true,
+        'has_archive'   => false,
+        'show_in_menu'  => true,
+        'supports'      => ['title', 'thumbnail', 'excerpt'],
+        'menu_icon'     => 'dashicons-cart',
+        'rewrite'       => ['slug' => 'termek'],
+    ]);
+}
+add_action('init', 'register_termek_post_type');
+
+// Register Termek Category Taxonomy
+function register_termek_taxonomy() {
+    register_taxonomy('termek_kat', 'termek', [
+        'labels' => [
+            'name'          => 'Termék kategóriák',
+            'singular_name' => 'Termék kategória',
+            'add_new_item'  => 'Új kategória',
+            'edit_item'     => 'Kategória szerkesztése',
+            'all_items'     => 'Összes kategória',
+        ],
+        'hierarchical' => true,
+        'show_ui'      => true,
+        'rewrite'      => ['slug' => 'termek-kategoria'],
+    ]);
+}
+add_action('init', 'register_termek_taxonomy');

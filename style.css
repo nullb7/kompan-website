@@ -3089,7 +3089,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 .termekek-title {
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   color: #36393c;
 }
 
@@ -3098,7 +3098,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 48px;
 }
 
 .filter-pill {
@@ -3175,24 +3175,28 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 40px;
-  column-gap: 50px;
+  column-gap: 60px;
 }
 
 .termek-card {
   text-decoration: none;
   color: inherit;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .termek-card:hover .termek-image img {
   transform: scale(1.03);
+  overflow: hidden;
 }
 
 .termek-image {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  border-radius: 4px;
   background: #f0f0f0;
+  overflow: hidden;
 }
 
 .termek-image img {
@@ -3200,12 +3204,14 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
+  border-radius: 8px 8px 0 0;
 }
 
 .termek-title {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #36393c;
+  margin: 24px;
 }
 
 /* Pagination */
@@ -3240,6 +3246,15 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
 /* Responsive */
 @media (max-width: 768px) {
+  .termekek-container {
+    padding: 40px 20px;
+  }
+
+  .termekek-meta {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .termekek-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3248,5 +3263,174 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 @media (max-width: 480px) {
   .termekek-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =====================
+   SINGLE TERMÉK PAGE
+   ===================== */
+
+.termek-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Top section */
+.termek-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+/* Gallery */
+.termek-main-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.termek-thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.termek-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.termek-thumb.active,
+.termek-thumb:hover {
+  border-color: #e63329;
+}
+
+/* Details */
+.termek-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #36393c;
+  margin-bottom: 24px;
+}
+
+.termek-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  color: #36393c;
+}
+
+.meta-label {
+  font-weight: 600;
+}
+
+/* Buttons */
+.termek-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #e63329;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #c62820;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e63329;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 2px solid #e63329;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #e63329;
+  color: white;
+}
+
+/* Technical Drawing Section */
+.termek-rajz-section {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.termek-rajz-images {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.termek-rajz-images img {
+  max-width: 45%;
+  object-fit: contain;
+}
+
+/* Dimensions */
+.termek-dimensions {
+  display: flex;
+  gap: 16px;
+}
+
+.dimension-box {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-width: 100px;
+}
+
+.dimension-label {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.dimension-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #36393c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .termek-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .termek-rajz-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .termek-rajz-images img {
+    max-width: 100%;
   }
 }

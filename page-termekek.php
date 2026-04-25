@@ -12,11 +12,11 @@ get_header(); ?>
         <button class="filter-pill active" data-category="all">Minden termék</button>
         <?php
         $categories = get_terms([
-            'taxonomy' => 'product_cat',
+            'taxonomy' => 'termek_kat',
             'hide_empty' => true,
             'parent' => 0
         ]);
-        if (!is_wp_error($categories && !empty($categories))) :
+        if (!is_wp_error($categories) && !empty($categories)) :
         foreach ($categories as $cat) : ?>
             <button class="filter-pill" data-category="<?php echo esc_attr($cat->slug); ?>">
                 <?php echo esc_html($cat->name); ?>
