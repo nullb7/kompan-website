@@ -286,3 +286,87 @@ function register_termek_taxonomy() {
     ]);
 }
 add_action('init', 'register_termek_taxonomy');
+
+function search_by_taxonomy($query) {
+    if (!is_admin() && $query->is_search() && $query->is_main_query()) {
+        $search_term = $query->query_vars['s'];
+
+        // Find matching taxonomy terms
+        $terms = get_terms([
+            'taxonomy'   => 'termek_kat',
+            'name__like' => $search_term,
+            'hide_empty' => false,
+        ]);
+
+        if (!empty($terms) && !is_wp_error($terms)) {
+            $term_ids = wp_list_pluck($terms, 'term_id');
+
+            $tax_query = [
+                [
+                    'taxonomy' => 'termek_kat',
+                    'field'    => 'term_id',
+                    'terms'    => $term_ids,
+                    'operator' => 'IN',
+                ]
+            ];
+
+            $query->set('tax_query', $tax_query);
+            $query->set('post_type', 'termek');
+
+            // Clear the search string so WP doesn't filter by title too strictly
+            $query->set('s', '');
+        } else {
+            // Normal search — still limit to termek post type
+            $query->set('post_type', 'termek');
+        }
+    }
+
+    return $query;
+}
+add_filter('pre_get_posts', 'search_by_taxonomy');
+
+function search_suggestions_ajax() {
+    $term = sanitize_text_field($_POST['term'] ?? '');
+    if (empty($term)) wp_send_json([]);
+
+    $suggestions = [];
+
+    // Match product titles
+    $posts = get_posts([
+        'post_type'      => 'termek',
+        'posts_per_page' => 5,
+        's'              => $term,
+        'post_status'    => 'publish',
+    ]);
+    foreach ($posts as $post) {
+        $suggestions[] = [
+            'label' => $post->post_title,
+            'url'   => get_permalink($post->ID),
+            'type'  => 'product',
+        ];
+    }
+
+    // Match category names
+    $terms = get_terms([
+        'taxonomy'   => 'termek_kat',
+        'name__like' => $term,
+        'hide_empty' => false,
+    ]);
+    foreach ($terms as $t) {
+        $suggestions[] = [
+            'label' => $t->name,
+            'url'   => home_url('/?s=' . urlencode($t->name)),
+            'type'  => 'category',
+        ];
+    }
+
+    wp_send_json($suggestions);
+}
+add_action('wp_ajax_search_suggestions', 'search_suggestions_ajax');
+add_action('wp_ajax_nopriv_search_suggestions', 'search_suggestions_ajax');
+
+function enqueue_search_assets() {
+    wp_enqueue_script('search-script', get_template_directory_uri() . '/js/search.js', [], null, true);
+    wp_localize_script('search-script', 'ajaxUrl', admin_url('admin-ajax.php'));
+}
+add_action('wp_enqueue_scripts', 'enqueue_search_assets');

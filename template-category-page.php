@@ -15,18 +15,19 @@ get_header(); ?>
     ?>
 
     <!-- Hero Section -->
-    <section class="category-hero" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('<?php echo esc_url($hero_img['url']); ?>');">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="category-hero-h2">Kinek szól az oldalunk?</h2>
-                <h1><?php echo esc_html($hero_ttl); ?></h1>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-red">Lépj velünk kapcsolatban</a>
-                    <a href="#" class="btn btn-outline">Termékkatalógus letöltése</a>
-                </div>
-            </div>
+      <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('<?php echo esc_url($hero_img['url']); ?>');">
+    <div class="container">
+      <div class="hp-hero__inner">
+        <p class="hp-hero__intro">A Magyar cégről</p>
+        <p class="hp-hero__title">Üdvözöljük a KOMPAN</p>
+        <p class="hp-hero__title">világába!</p>
+        <div class="hp-hero__actions">
+          <a href="/rolunk" class="btn btn--red">Lépj velünk kapcsolatba!</a>
+          <a href="catalog" class="btn btn--red">Termékkatalógus letöltése</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
     <!-- Main Content Section -->
     <section class="category-intro py-5">

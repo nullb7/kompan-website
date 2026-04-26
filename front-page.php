@@ -21,8 +21,8 @@ $hero_subtitle = get_field('hero_subtitle');
       <p class="hp-hero__intro"><?php echo esc_html($hero_subtitle); ?></p>
       <p class="hp-hero__title"><?php echo esc_html($hero_title); ?></p>
       <div class="hp-hero__actions">
-        <a href="#contact" class="btn btn--red">Lépj velünk kapcsolatba!</a>
-        <a href="catalog" class="btn btn--red">Termékkatalógus letöltése</a>
+        <a href="/kapcsolat" class="btn btn--red">Lépj velünk kapcsolatba!</a>
+        <a href="" class="btn btn--red">Termékkatalógus letöltése</a>
          
       </div>
     </div>
@@ -102,7 +102,7 @@ $hero_subtitle = get_field('hero_subtitle');
             <p class="hp-about__feature-text">A jó játszóterek és szabadtéri edzőterek nagy igénybevételt kapnak – a mi megoldásaink pedig erre készülnek. Minőségi anyagokat és precíz mérnöki munkát használunk, hogy minden megoldásunk kiállja az idő próbáját, és hosszú távon értéket adjon a következő generációknak is.</p>
           </div>
 
-          <a href="#" class="hp-about__link">Tudj meg többet <span class="arrow">›</span></a>
+          <a href="/rolunk" class="hp-about__link">Tudj meg többet <span class="arrow">›</span></a>
         </div>
 
       </div>
@@ -156,7 +156,7 @@ $hero_subtitle = get_field('hero_subtitle');
           <p class="hp-cta-banner__subtitle">Kíváncsi vagy a megvalósult projektekre?</p>
           <h2 class="hp-cta-banner__title">Keress referenciát a saját területedhez</h2>
           <div class="hp-cta-banner__actions">
-            <a href="#" class="btn btn--red">Mutasd a projekteket</a>
+            <a href="/referenciak" class="btn btn--red">Mutasd a projekteket</a>
           </div>
         </div>
       </div>

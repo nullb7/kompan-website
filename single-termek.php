@@ -5,8 +5,8 @@ while (have_posts()) : the_post();
     // ACF Fields
     $cikkszam   = get_field('termek_cikkszam');
     $korosztaly = get_field('termek_korosztaly');
-    $rogzites   = get_field('termek_rogzites');
-    $esesi      = get_field('termek_esesi');
+    $kapacitas   = get_field('termek_kapacitas');
+    $felhcsoport = get_field('termek_felhasznaloi_csoport');
     $info_url   = get_field('termek_info_url');
     $rajz_1     = get_field('termek_rajz_1');
     $rajz_2     = get_field('termek_rajz_2');
@@ -23,6 +23,7 @@ while (have_posts()) : the_post();
 ?>
 
 <div class="termek-page">
+  <div class="container">
 
     <!-- TOP SECTION -->
     <div class="termek-top">
@@ -50,18 +51,18 @@ while (have_posts()) : the_post();
                 <?php if ($korosztaly) : ?>
                     <p><span class="meta-label">Korosztály:</span> <?php echo esc_html($korosztaly); ?></p>
                 <?php endif; ?>
-                <?php if ($rogzites) : ?>
-                    <p><span class="meta-label">Rögzítés:</span> <?php echo esc_html($rogzites); ?></p>
+                <?php if ($kapacitas) : ?>
+                    <p><span class="meta-label">Kapacitás:</span> <?php echo esc_html($kapacitas); ?></p>
                 <?php endif; ?>
-                <?php if ($esesi) : ?>
-                    <p><span class="meta-label">Esési magasság:</span> <?php echo esc_html($esesi); ?></p>
+                <?php if ($felhcsoport) : ?>
+                    <p><span class="meta-label">Felhasználói csoport:</span> <?php echo esc_html($felhcsoport); ?></p>
                 <?php endif; ?>
             </div>
 
-            <div class="termek-buttons">
-                <a href="/kapcsolat" class="btn-primary">Lépj velünk kapcsolatba!</a>
+            <div class="hp-hero__actions">
+                <a href="/kapcsolat" class="btn">Lépj velünk kapcsolatba!</a>
                 <?php if ($info_url) : ?>
-                    <a href="<?php echo esc_url($info_url); ?>" class="btn-secondary" target="_blank">Részletes információk</a>
+                    <a href="<?php echo esc_url($info_url); ?>" class="btn" target="_blank">Részletes információk</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -103,8 +104,9 @@ while (have_posts()) : the_post();
         <?php endif; ?>
     </div>
     <?php endif; ?>
+  </div>
+            </div>
 
-</div>
 
 <script>
 document.querySelectorAll('.termek-thumb').forEach(thumb => {
