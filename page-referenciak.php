@@ -101,7 +101,7 @@ get_header();
 
       <div class="ref-szolgaltas__container">
 
-        <div class="ref-szolgaltatas__grid">
+        <div class="ref-szolgaltatas__grid" id="szolg-grid">
     
           <?php
     
@@ -138,12 +138,12 @@ get_header();
             ],
           ];
     
-          foreach ($szolgatasok as $szolg) :
+          foreach ($szolgatasok as $i => $szolg) :
             $img = $szolg['img'] ?? '';
             $title = $szolg['title'] ?? '';
             $desc = $szolg['desc'] ?? '';
           ?>
-            <div class="ref-szolg-card">
+            <div class="ref-szolg-card" data-index="<?php echo $i; ?>">
               <div class="ref-szolg-card__image">
                 <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($title); ?>">
               </div>
@@ -153,6 +153,7 @@ get_header();
     
           <?php endforeach; ?>
         </div>
+        <div class="szolg-pagnation" id="szolg-pagnation"></div>
       </div>
     </div>
   </section>

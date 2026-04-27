@@ -248,6 +248,15 @@ function get_termekek_ajax() {
 add_action('wp_ajax_get_termekek', 'get_termekek_ajax');
 add_action('wp_ajax_nopriv_get_termekek', 'get_termekek_ajax');
 
+function redirect_termek_kat_to_termekek() {
+    if (is_tax('termek_kat')) {
+        $term = get_queried_object();
+        wp_redirect(home_url('/termekek/?kat=' . $term->slug), 301);
+        exit;
+    }
+}
+add_action('template_redirect', 'redirect_termek_kat_to_termekek');
+
 // Register Termek Custom Post Type
 function register_termek_post_type() {
     register_post_type('termek', [
@@ -370,3 +379,10 @@ function enqueue_search_assets() {
     wp_localize_script('search-script', 'ajaxUrl', admin_url('admin-ajax.php'));
 }
 add_action('wp_enqueue_scripts', 'enqueue_search_assets');
+
+function enqueue_referenciak_assets() {
+    if (is_page_template('page-referenciak.php')) {
+        wp_enqueue_script('referenciak-script', get_template_directory_uri() . '/js/referenciak.js', [], null, true);
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_referenciak_assets');

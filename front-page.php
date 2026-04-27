@@ -122,7 +122,7 @@ $hero_subtitle = get_field('hero_subtitle');
       <div class="hp-services__grid">
         
         <!-- Card 1: Playgrounds -->
-        <a href="#" class="service-card">
+        <a href="<?php echo esc_url(get_term_link('jatekeszkozok', 'termek_kat')); ?>" class="service-card">
           <div class="service-card__image">
             <img src="http://kompanwebsite.local/wp-content/uploads/2026/03/services1.jpg" alt="Játszótéri eszközök">
           </div>
@@ -133,7 +133,7 @@ $hero_subtitle = get_field('hero_subtitle');
         </a>
 
         <!-- Card 2: Fitness -->
-        <a href="#" class="service-card">
+        <a href="<?php echo esc_url(get_term_link('fitneszeszkozok', 'termek_kat')); ?>" class="service-card">
           <div class="service-card__image">
             <img src="http://kompanwebsite.local/wp-content/uploads/2026/03/services2.jpg" alt="Szabadtéri fitneszeszközök">
           </div>
