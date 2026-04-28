@@ -2800,7 +2800,6 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 /* ── Szolgáltatási Kör ── */
 .ref-szolgaltatas {
   padding: 60px 0;
-  overflow: visable;
 }
 
 .ref-szolgaltatas__title {
@@ -2810,56 +2809,26 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   color: #36393c;
 }
 
+.szolg-slider-wrapper {
+  overflow: hidden; /* clips cards outside view */
+  width: 100%;
+}
+
 .ref-szolgaltatas__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  overflow: visible;
-}
-
-.szolg-pagination {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 32px;
-}
-
-.szolg-page-btn {
-  width: 36px;
-  height: 36px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-}
-
-.szolg-page-btn:hover {
-  border-color: #e31e24;
-  color: #e31e24;
-}
-
-.szolg-page-btn.active {
-  background: #e31e24;
-  border-color: #e31e24;
-  color: #fff;
+  gap: 24px;
+  transition: transform 0.3s ease;
 }
 
 .ref-szolg-card {
-  flex: 0 0 280px;
-  scroll-snap-align: start;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
 }
 
 .ref-szolg-card__image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 220px;
   overflow: hidden;
   border-radius: 6px;
-  margin-bottom: 10px;
 }
 
 .ref-szolg-card__image img {
@@ -2881,6 +2850,51 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   line-height: 1.625rem;
   color: #36393c;
   margin-top: auto;
+}
+
+.szolg-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.szolg-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.szolg-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.szolg-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.szolg-arrow .arrow {
+  margin-bottom: 5px;
+}
+
+.szolg-arrow:hover:not(:disabled) {
+  border-color: #e31e24;
+  color: #e31e24;
+}
+
+.szolg-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 @media (max-width: 1024px) {

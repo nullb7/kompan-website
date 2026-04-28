@@ -1,42 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("szolg-grid");
+  const wrapper = document.querySelector(".szolg-slider-wrapper");
   const cards = document.querySelectorAll("#szolg-grid .ref-szolg-card");
-  const pagination = document.getElementById("szolg-pagination");
-  const perPage = 4;
+  const count = document.getElementById("szolg-count");
+  const prev = document.getElementById("szolg-prev");
+  const next = document.getElementById("szolg-next");
+  const visible = 4;
+  const gap = 24;
   const total = cards.length;
-  const pages = Math.ceil(total / perPage);
-  let current = 1;
+  let start = 0;
 
-  function showPage(page) {
-    const start = (page - 1) * perPage;
-    const end = start + perPage;
+  const containerWidth = wrapper.offsetWidth;
+  const cardWidth = (containerWidth - gap * (visible - 1)) / visible;
 
-    cards.forEach((card, i) => {
-      card.style.display = i >= start && i < end ? "" : "none";
-    });
+  cards.forEach((card) => {
+    card.style.width = cardWidth + "px";
+    card.style.minWidth = cardWidth + "px";
+    card.style.maxWidth = cardWidth + "px";
+  });
+
+  function showCards() {
+    grid.style.transform = `translateX(-${start * (cardWidth + gap)}px)`;
+    count.textContent = total + " items";
+    prev.disabled = start === 0;
+    next.disabled = start + visible >= total;
   }
 
-  function buildPagination() {
-    if (pages <= 1) return;
-
-    let html = "";
-    for (let i = 1; i <= pages; i++) {
-      html += `<button class="szolg-page-btn ${i === 1 ? "active" : ""}" data-page="${i}">${i}</button>`;
+  prev.addEventListener("click", () => {
+    if (start > 0) {
+      start--;
+      showCards();
     }
-    pagination.innerHTML = html;
+  });
 
-    pagination.querySelectorAll(".szolg-page-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        pagination
-          .querySelectorAll(".szolg-page-btn")
-          .forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
+  next.addEventListener("click", () => {
+    if (start + visible < total) {
+      start++;
+      showCards();
+    }
+  });
 
-        current = parseInt(btn.dataset.page);
-        showPage(current);
-      });
-    });
-  }
-
-  buildPagination();
-  showPage(1);
+  showCards();
 });

@@ -100,61 +100,70 @@ get_header();
     
 
       <div class="ref-szolgaltas__container">
+        <div class="szolg-slider-wrapper">
 
-        <div class="ref-szolgaltatas__grid" id="szolg-grid">
-    
-          <?php
-    
-          $szolgatasok = [
-            [
-              'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/Container.jpg',
-              'title' => 'Előkészítés',
-              'desc'  => 'KOMPAN tanácsadóink az egyéni kívánságok és lehetőségek, valamint a területi tulajdonságok figyelembevételével segítenek a működő játszókörnyezet alapkoncepciójának kidolgozásában, a játszószer-családok közüli választásban, a terület különböző korcsoportok és mozgásformák szerinti felosztásában.',
-            ],
-            [
-              'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c.jpg',
-              'title' => 'Felülnézeti- és látványtervek',
-              'desc'  => 'Tervező csapatunk professzionális tanácsokkal segíti Önt a kialakítással kapcsolatban, akár a konkrét játszóeszközök, akár a kiegészítők (padok, hulladékgyűjtők, stb.) vagy a növényzet megtervezéséről van szó. Átfogó AutoCAD 2D vagy 3D látványtervek és komplett javaslatok, változatok kidolgozásával állunk rendelkezésére.',
-            ],
-            [
-              'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c2.jpg',
-              'title' => 'Tanácsadás, finanszírozás',
-              'desc'  => 'Az előkészítési és tervezési folyamat során számos kérdés merülhet fel. Sok partnerünknek speciális igényei vannak a játszóterekkel kapcsolatban, a biztonsági, jogi és környezetvédelmi kérdéseket illetően, esetleg pályázati lehetőségek terén. Bármilyen kérdés és igény merüljön is fel, ügyfeleinket hozzáértő tanácsadással és szakértő szolgáltatással segítjük.',
-            ],
-            [
-              'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.jpg',
-              'title' => 'Kivitelezés',
-              'desc'  => 'Az előkészítési és tervezési folyamat során számos kérdés merülhet fel. Sok partnerünknek speciális igényei vannak a játszóterekkel kapcsolatban, a biztonsági, jogi és környezetvédelmi kérdéseket illetően, esetleg pályázati lehetőségek terén. Bármilyen kérdés és igény merüljön is fel, ügyfeleinket hozzáértő tanácsadással és szakértő szolgáltatással segítjük.',
-            ],
-            [
-              'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg',
-              'title' => 'Felülvizsgálat és karbantartás',
-              'desc'  => 'Minden KOMPAN termék alapos tervezési folyamatot követően, legyártásra és első osztályú anyagok felhasználásával készül, így különlegesen tartós és ellenálló. Mindamellett a KOMPAN hitelesített biztonsági felülvizsgálat javasolt.',
-            ],
-            [
-              'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c4.jpg',
-              'title' => 'Szerviz',
-              'desc'  => 'Világszerte ismertek vagyunk a legjobb, széleskörű szervizünkről. Egyedülálló alkatrész utánpótlási szolgáltatásunk a játszóeszköz utolsó kibocsátásától számított 10 évig biztosított. Amennyiben játékaink meghibásodnak, vagy rongálás következtében balesetveszélyessé válnak, kollégáink gondoskodnak azok javításáról, ha ez nem lehetséges, a játszószerek biztonságos elzárásáról.',
-            ],
-          ];
-    
-          foreach ($szolgatasok as $i => $szolg) :
-            $img = $szolg['img'] ?? '';
-            $title = $szolg['title'] ?? '';
-            $desc = $szolg['desc'] ?? '';
-          ?>
-            <div class="ref-szolg-card" data-index="<?php echo $i; ?>">
-              <div class="ref-szolg-card__image">
-                <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($title); ?>">
+          <div class="ref-szolgaltatas__grid" id="szolg-grid">
+      
+            <?php
+      
+            $szolgatasok = [
+              [
+                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/Container.jpg',
+                'title' => 'Előkészítés',
+                'desc'  => 'KOMPAN tanácsadóink az egyéni kívánságok és lehetőségek, valamint a területi tulajdonságok figyelembevételével segítenek a működő játszókörnyezet alapkoncepciójának kidolgozásában, a játszószer-családok közüli választásban, a terület különböző korcsoportok és mozgásformák szerinti felosztásában.',
+              ],
+              [
+                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c.jpg',
+                'title' => 'Felülnézeti- és látványtervek',
+                'desc'  => 'Tervező csapatunk professzionális tanácsokkal segíti Önt a kialakítással kapcsolatban, akár a konkrét játszóeszközök, akár a kiegészítők (padok, hulladékgyűjtők, stb.) vagy a növényzet megtervezéséről van szó. Átfogó AutoCAD 2D vagy 3D látványtervek és komplett javaslatok, változatok kidolgozásával állunk rendelkezésére.',
+              ],
+              [
+                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c2.jpg',
+                'title' => 'Tanácsadás, finanszírozás',
+                'desc'  => 'Az előkészítési és tervezési folyamat során számos kérdés merülhet fel. Sok partnerünknek speciális igényei vannak a játszóterekkel kapcsolatban, a biztonsági, jogi és környezetvédelmi kérdéseket illetően, esetleg pályázati lehetőségek terén. Bármilyen kérdés és igény merüljön is fel, ügyfeleinket hozzáértő tanácsadással és szakértő szolgáltatással segítjük.',
+              ],
+              [
+                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.jpg',
+                'title' => 'Kivitelezés',
+                'desc'  => 'Az előkészítési és tervezési folyamat során számos kérdés merülhet fel. Sok partnerünknek speciális igényei vannak a játszóterekkel kapcsolatban, a biztonsági, jogi és környezetvédelmi kérdéseket illetően, esetleg pályázati lehetőségek terén. Bármilyen kérdés és igény merüljön is fel, ügyfeleinket hozzáértő tanácsadással és szakértő szolgáltatással segítjük.',
+              ],
+              [
+                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg',
+                'title' => 'Felülvizsgálat és karbantartás',
+                'desc'  => 'Minden KOMPAN termék alapos tervezési folyamatot követően, legyártásra és első osztályú anyagok felhasználásával készül, így különlegesen tartós és ellenálló. Mindamellett a KOMPAN hitelesített biztonsági felülvizsgálat javasolt.',
+              ],
+              [
+                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c4.jpg',
+                'title' => 'Szerviz',
+                'desc'  => 'Világszerte ismertek vagyunk a legjobb, széleskörű szervizünkről. Egyedülálló alkatrész utánpótlási szolgáltatásunk a játszóeszköz utolsó kibocsátásától számított 10 évig biztosított. Amennyiben játékaink meghibásodnak, vagy rongálás következtében balesetveszélyessé válnak, kollégáink gondoskodnak azok javításáról, ha ez nem lehetséges, a játszószerek biztonságos elzárásáról.',
+              ],
+            ];
+      
+            foreach ($szolgatasok as $i => $szolg) :
+              $img = $szolg['img'] ?? '';
+              $title = $szolg['title'] ?? '';
+              $desc = $szolg['desc'] ?? '';
+            ?>
+              <div class="ref-szolg-card" data-index="<?php echo $i; ?>">
+                <div class="ref-szolg-card__image">
+                  <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($title); ?>">
+                </div>
+                <h3 class="ref-szolg-card__title"><?php echo esc_html($title); ?></h3>
+                <p class="ref-szolg-card__text"><?php echo esc_html($desc); ?></p>
               </div>
-              <h3 class="ref-szolg-card__title"><?php echo esc_html($title); ?></h3>
-              <p class="ref-szolg-card__text"><?php echo esc_html($desc); ?></p>
-            </div>
-    
-          <?php endforeach; ?>
+      
+              <?php endforeach; ?>
+          </div>
         </div>
-        <div class="szolg-pagnation" id="szolg-pagnation"></div>
       </div>
+
+        <div class="szolg-pagination" id="szolg-pagination">
+            <span class="szolg-count" id="szolg-count"></span>
+            <div class="szolg-arrows">
+                <button class="szolg-arrow" id="szolg-prev"><span class="arrow">&#8592;</span></button>
+                <button class="szolg-arrow" id="szolg-next"><span class="arrow">&#8594;</span></button>
+            </div>
+        </div>
     </div>
   </section>
 
