@@ -535,17 +535,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: inherit;
 }
 
 a:visited {
-  color: #800080;
+  color: inherit;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #191970;
+  color: inherit;
 }
 
 a:focus {
@@ -974,7 +974,7 @@ MY CUSTOM STYLES (MATCHING FIGMA)
 :root {
   --font-main: "Figtree", sans-serif;
   --primary-red: #e31e24;
-  --text-dark: #111111;
+  --text-dark: #36393c;
 }
 
 /* --- Base Typography --- */
@@ -1037,6 +1037,13 @@ html {
 .container {
   max-width: 1200px; /* Adjust this to match your Figma frame width */
   margin: 0 auto;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .hp-hero__inner {
@@ -1884,7 +1891,6 @@ html {
     aspect-ratio: 1 / 1; /* Square images as seen in Figma */
     margin-bottom: 20px;
     overflow: hidden;
-    border-radius: 4px; /* Slight rounding or square based on your preference */
   }
 
   .service-card__image img {
@@ -2233,7 +2239,6 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 12px;
-    color: #111111;
   }
 
   .hp-about__feature-text {
@@ -2330,6 +2335,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1.1; /* Kicsit álló formátumú legyen mobilone */
+    color: #ffffff;
   }
 
   .hp-cta-banner__content {
@@ -2816,12 +2822,15 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
 .ref-szolgaltatas__grid {
   display: flex;
+  width: 100%;
   gap: 24px;
   transition: transform 0.3s ease;
 }
 
 .ref-szolg-card {
   flex-shrink: 0;
+  /* Default: 4 visible cards — JS overrides with exact pixels */
+  width: calc((100% - 72px) / 4);
 }
 
 .ref-szolg-card__image {
@@ -2898,25 +2907,36 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 @media (max-width: 1024px) {
+  .ref-szolgaltatas__grid {
+    padding: 40px 20px;
+  }
   .ref-szolgaltatas__title {
     padding: 40px 20px;
   }
+  .ref-szolg-card {
+    /* 2 visible cards on tablet */
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .szolg-slider-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .szolg-slider-wrapper::-webkit-scrollbar {
+    display: none;
+  }
   .ref-szolgaltatas__grid {
     display: flex;
-    flex-wrap: nowrap; /* Forces one single line */
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    gap: 16px;
     scroll-snap-type: x mandatory;
-
-    /* Spacing for "Peeking" effect */
-    padding-left: 24px;
-    padding-right: 24px;
-    gap: 23px;
-    margin-left: 23px;
-
-    /* Hide scrollbars */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  }
+  .ref-szolg-card {
+    min-width: 85%;
+    scroll-snap-align: start;
   }
 }
 
@@ -3434,6 +3454,13 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 /* Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .termekek-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .termekek-container {
     padding: 40px 20px;

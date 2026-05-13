@@ -382,7 +382,7 @@ add_action('wp_enqueue_scripts', 'enqueue_search_assets');
 
 function enqueue_referenciak_assets() {
     if (is_page_template('page-referenciak.php')) {
-        wp_enqueue_script('referenciak-script', get_template_directory_uri() . '/js/referenciak.js', [], null, true);
+        wp_enqueue_script('referenciak-script', get_template_directory_uri() . '/js/referenciak.js', [], filemtime(get_template_directory() . '/js/referenciak.js'), true);
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_referenciak_assets');
