@@ -1073,6 +1073,10 @@ html {
 }
 
 /* --- Logo --- */
+.nav-logo {
+  margin-bottom: 15px;
+}
+
 .nav-logo a {
   display: flex;
   align-items: center;
@@ -1087,7 +1091,7 @@ html {
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 45px;
   width: auto;
 }
 

@@ -56,12 +56,12 @@ $hero_subtitle = get_field('hero_subtitle');
             // We'll hardcode these for now to see the design, 
             // then we can make them dynamic with ACF!
             $categories = [
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-3.jpg', 'title' => 'Bölcsődék-Óvodák', 'link' => home_url('/bolcsode-ovi/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-4.jpg', 'title' => 'Iskolák', 'link' => home_url('/iskolak/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-5.jpg', 'title' => 'Lakóközösségek', 'link' => home_url('/lakokozzosegek/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-6.jpg', 'title' => 'Vállalatok', 'link' => home_url('/vallalatok/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-7.jpg', 'title' => 'Tervezők', 'link' => home_url('/tervezok/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/03/image-8.jpg', 'title' => 'Önkormányzatok', 'link' => home_url('/onkormanyzatok/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-11-1.jpg', 'title' => 'Bölcsődék-Óvodák', 'link' => home_url('/bolcsode-ovi/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-12.jpg', 'title' => 'Iskolák', 'link' => home_url('/iskolak/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-13.jpg', 'title' => 'Lakóközösségek', 'link' => home_url('/lakokozzosegek/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-6.jpg', 'title' => 'Vállalatok', 'link' => home_url('/vallalatok/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-16.jpg', 'title' => 'Tervezők', 'link' => home_url('/tervezok/')],
+              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-15.jpg', 'title' => 'Önkormányzatok', 'link' => home_url('/onkormanyzatok/')],
             ];
 
             foreach ($categories as $cat) : ?>
