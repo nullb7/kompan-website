@@ -175,7 +175,7 @@ get_header();
         <div class="ref-map__embed">
           <!-- NOTE: Google maps link kell ide! -->
           <iframe
-            src="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID"
+            src="https://www.google.com/maps/d/embed?mid=1sbeAX9MWY_QqVkVHXc9Iy-chRU_pGF-o"
             width="100%"
             height="500"
             style="border:0;"

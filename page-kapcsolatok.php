@@ -70,7 +70,7 @@ get_header();
 
         <div class="kapcsolat-map">
           <iframe
-            src="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.100879949703!2d19.0448995901883!3d47.44897295199992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dd780577ea05%3A0x609dff71d515f5d9!2sBudapest%2C%20Hunyadi%20J%C3%A1nos%20%C3%BAt%203%2C%201117!5e0!3m2!1shu!2shu!4v1647951002710!5m2!1shu!2shu"
             width="100%"
             height="280"
             style="border:0;"
