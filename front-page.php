@@ -35,7 +35,6 @@ $hero_subtitle = get_field('hero_subtitle');
   <section class="hp-intro">
     <div class="container container--narrow">
        <h2 class="hp-intro__text">
-                <?php // You can make this an ACF field later if you want! ?>
                 Legyen szó játszótérről vagy szabadtéri edzésről, segítünk olyan kültéri tereket létrehozni, ahová szívesen mennek az emberek. Találkozzunk kint!
             </h2>
     </div>

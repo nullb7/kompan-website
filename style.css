@@ -1607,12 +1607,12 @@ html {
 @media (min-width: 768px) {
   /* --- Hero Section --- */
   .hp-hero {
-    aspect-ratio: unset; /* Same proportions as the front-page image */
+    aspect-ratio: unset; 
     overflow: visable;
-    min-height: 500px; /* Ensures it doesn't get too short on smaller screens */
+    min-height: 500px; 
     height: auto;
-    padding: 80px 0; /* Adds vertical padding to give more space around the text */
-    background-size: cover; /* Cover works better than contain for category pages */
+    padding: 80px 0; 
+    background-size: cover; 
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #000000;
@@ -1661,8 +1661,8 @@ html {
     line-height: 1.1;
     font-style: bold;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    font-size: 60px; /* Large and impactful */
-    letter-spacing: 0em; /* Tighter spacing for headlines */
+    font-size: 60px; 
+    letter-spacing: 0em; 
     font-family: var(--font-main);
     margin-top: 0;
     margin-bottom: 0px;
@@ -1698,19 +1698,19 @@ html {
 
   /* --- Intro Section --- */
   .hp-intro {
-    padding: 100px 0; /* Big white space above and below */
+    padding: 100px 0; 
     background-color: #ffffff;
     text-align: center;
   }
 
   .container--narrow {
-    max-width: 764px; /* Keeps the text from stretching too wide */
+    max-width: 764px; 
     margin: 0 auto;
   }
 
   .hp-intro__text {
-    font-size: 30px; /* Match Figma size */
-    font-weight: 400; /* Light/Regular weight for this part */
+    font-size: 30px; 
+    font-weight: 400; 
     line-height: 1.4;
     color: #36393c;
     margin: 0;
@@ -1748,29 +1748,28 @@ html {
   }
 
   .category-card {
-    flex: 1; /* Makes all cards equal width */
-    min-width: 180px; /* Prevents cards from getting too squished */
+    flex: 1; 
+    min-width: 180px; 
     text-align: center;
     color: inherit;
     text-decoration: none;
   }
 
   .category-card__image {
-    aspect-ratio: 4 / 5; /* Matches the vertical rectangle shape in Figma */
-    margin-bottom: 15px;
+    aspect-ratio: 4 / 5; 
     overflow: hidden;
-    border-radius: 12px; /* Rounded corners like Figma */
+    border-radius: 12px; 
   }
 
   .category-card__image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps image from stretching */
+    object-fit: cover; 
     transition: transform 0.3s ease;
   }
 
   .category-card:hover img {
-    transform: scale(1.05); /* Nice hover effect */
+    transform: scale(1.05); 
   }
 
   .category-card:focus-visible {
@@ -1794,7 +1793,7 @@ html {
 
   .hp-about__grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Left side slightly narrower */
+    grid-template-columns: 1fr 1.2fr; 
     gap: 80px;
     align-items: flex-start;
   }
@@ -1882,17 +1881,17 @@ html {
 
   .hp-services__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr; 
     gap: 30px;
   }
 
   .service-card {
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none; 
     display: block;
   }
 
   .service-card__image {
-    aspect-ratio: 1 / 1; /* Square images as seen in Figma */
+    aspect-ratio: 1 / 1; 
     margin-bottom: 20px;
     overflow: hidden;
   }
@@ -1905,7 +1904,7 @@ html {
   }
 
   .service-card:hover .service-card__image img {
-    transform: scale(1.03); /* Subtle zoom on hover */
+    transform: scale(1.03); 
   }
 
   .service-card__title {
@@ -1946,10 +1945,10 @@ html {
   .hp-cta-banner__inner {
     position: relative;
     width: 100%;
-    padding: 80px 60px; /* Padding inside the banner */
+    padding: 80px 60px; 
     background-size: cover;
     background-position: center;
-    border-radius: 16px; /* Rounded corners matching Figma */
+    border-radius: 16px; 
     overflow: hidden;
     color: #ffffff;
     display: flex;
@@ -2012,8 +2011,8 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   /* --- 1. Header Adjustment --- */
   .hp-categories {
     padding: 60px 0;
-    margin-left: 0 !important; /* Remove desktop margin */
-    overflow: hidden; /* Prevents horizontal scroll on the body */
+    margin-left: 0 !important; 
+    overflow: hidden; 
   }
 
   .hp-categories__header {
@@ -2038,7 +2037,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   /* --- 2. The Slider Grid --- */
   .hp-categories__grid {
     display: flex;
-    flex-wrap: nowrap; /* Forces one single line */
+    flex-wrap: nowrap; 
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -2070,8 +2069,8 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   }
 
   .category-card__image {
-    aspect-ratio: 4 / 5; /* Matches the tall rectangle shape in Image 7 */
-    border-radius: 20px; /* Big rounded corners like Figma */
+    aspect-ratio: 4 / 5; 
+    border-radius: 20px; 
     margin-bottom: 15px;
     width: 100%;
     overflow: hidden;
@@ -2095,10 +2094,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   /* --- 1. Hero Section Mobile --- */
   .hp-hero {
     display: flex;
-    align-items: flex-end; /* Push content to BOTTOM like category-hero */
+    align-items: flex-end; 
     justify-content: center;
-    min-height: 100svh; /* Full viewport height like category-hero */
-    padding-bottom: 40px; /* Space from bottom like category-hero */
+    min-height: 100svh; 
+    padding-bottom: 40px; 
     background-size: cover;
     background-position: center;
     overflow: visable;
@@ -2107,9 +2106,8 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   .hp-hero .container {
     margin: 0;
-    padding-top: 0; /* Remove the 200px that was pushing content down */
-    padding: 0 20px; /* Match category-hero side padding */
-    width: 100%;
+    padding-top: 0; 
+    padding: 0 20px; 
   }
 
   /* --- 2. Fix Buttons (This is what broke in Image 5) --- */
@@ -2118,7 +2116,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    margin-top: 30px; /* Space between title and buttons */
+    margin-top: 30px; /
   }
 
   /* Force the button styling to apply specifically in mobile */
@@ -2134,7 +2132,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     border-radius: 8px;
     text-align: center;
     line-height: 1.2;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-sizing: border-box; 
   }
 
   .hp-hero__actions .btn:hover {
@@ -2160,36 +2158,36 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   /* --- Intro Section Mobile ---*/
 
   .hp-intro {
-    padding: 80px 24px; /* Generous white space above/below */
+    padding: 80px 24px; 
     background-color: #ffffff;
     text-align: center;
   }
 
   .container--narrow {
-    max-width: 100%; /* Use full width on mobile */
+    max-width: 100%; 
     margin: 0 auto;
   }
 
   .hp-intro__text {
-    font-size: 22px; /* Scales down from desktop 30px to mobile */
-    font-weight: 400; /* Keeps it clean and readable as per Figma */
+    font-size: 22px; 
+    font-weight: 400; 
     line-height: 1.5;
     color: #333333;
     margin: 0;
-    letter-spacing: -0.01em; /* Slight tightening for modern look */
+    letter-spacing: -0.01em; 
   }
 
   /* --- Categories Section Mobile --- */
   .hp-categories {
     padding: 60px 0;
-    margin-left: 0; /* Reset desktop 200px margin */
+    margin-left: 0; 
   }
 
   .hp-categories__header {
-    padding: 0 24px; /* Align titles with the intro text */
+    padding: 0 24px; 
     margin-left: 0;
     margin-bottom: 30px;
-    text-align: left; /* Headers usually stay left even when intro is centered */
+    text-align: left; 
   }
 
   .section-title {
@@ -2207,7 +2205,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   /* --- About Section --- */
   .hp-about {
-    padding: 60px 24px; /* Matches the padding of other sections */
+    padding: 60px 24px; 
     background-color: #ffffff;
   }
 
@@ -2215,7 +2213,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   .hp-about__grid {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Space between the main intro and the details below */
+    gap: 40px; 
   }
 
   /* 2. Style the main heading and intro text */
@@ -2237,7 +2235,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   .hp-about__content {
     display: flex;
     flex-direction: column;
-    gap: 35px; /* Space between the two feature text blocks */
+    gap: 35px; 
   }
 
   .hp-about__feature-title {
@@ -2276,14 +2274,14 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   .hp-services__header {
     margin-bottom: 30px;
-    text-align: left; /* Keep titles left-aligned as per Figma */
+    text-align: left; 
   }
 
   /* 1. Stack the grid vertically */
   .hp-services__grid {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Space between the two large cards */
+    gap: 40px; 
   }
 
   .service-card {
@@ -2294,10 +2292,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   /* 2. Style the image container */
   .service-card__image {
-    aspect-ratio: 1 / 1; /* Keep them square as seen in Image 9 */
+    aspect-ratio: 1 / 1; 
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 8px; /* Subtle rounding */
+    border-radius: 8px; 
     overflow: hidden;
   }
 
@@ -2329,16 +2327,16 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   /* --- CTA Banner Section Mobile --- */
   .hp-cta-banner {
-    padding: 40px 20px; /* Kevesebb margó a banner körül mobilone */
+    padding: 40px 20px; /
   }
 
   .hp-cta-banner__inner {
-    padding: 60px 30px; /* Belső térköz a szöveg körül */
-    border-radius: 20px; /* Erősebb lekerekítés mint desktopon, a Figma alapján */
+    padding: 60px 30px; 
+    border-radius: 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1.1; /* Kicsit álló formátumú legyen mobilone */
+    aspect-ratio: 1 / 1.1; 
     color: #ffffff;
   }
 
@@ -2347,7 +2345,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Gombot is középre rakja */
+    align-items: center; 
     gap: 10px;
   }
 
@@ -2355,13 +2353,13 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: 15px;
-    opacity: 1; /* Jobb olvashatóság mobilone */
+    opacity: 1; 
     color: #ffffff;
     letter-spacing: 0.1rem;
   }
 
   .hp-cta-banner__title {
-    font-size: 30px; /* Kisebb betűméret, hogy ne törjön szét */
+    font-size: 30px; 
     line-height: 1.2;
     font-weight: 500;
     margin-bottom: 30px;
@@ -2375,7 +2373,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   }
 
   .hp-cta-banner__actions .btn {
-    width: 100%; /* Mobilone kényelmesebb a teljes szélességű gomb */
+    width: 100%; 
     padding: 18px 20px;
     font-size: 16px;
     background-color: #e31e24;
@@ -2391,14 +2389,14 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
 /* CONTENT SECTION */
 .category-intro {
-  padding: 80px 0; /* More space around the content */
+  padding: 80px 0; 
 }
 
 .category-image-and-text-wrapper {
   display: flex;
   grid-template-columns: 7fr 5fr;
   align-items: stretch;
-  gap: 60px; /* Responsive space between text and image */
+  gap: 60px; 
   margin: 0;
 }
 
@@ -2459,24 +2457,24 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 20px; /* Matching the Figma rounded corners */
+  border-radius: 20px; 
 }
 
 @media (max-width: 768px) {
   .category-hero {
-    height: 100svh; /* Full viewport height on mobile */
+    height: 100svh; 
     min-height: 500px;
-    align-items: flex-end; /* Push content to the BOTTOM */
-    padding-bottom: 40px; /* Space from the very bottom edge */
+    align-items: flex-end; 
+    padding-bottom: 40px; 
   }
 
   .category-hero .container {
     width: 100%;
-    padding: 0 20px; /* Side padding so buttons don't touch edges */
+    padding: 0 20px; 
   }
 
   .category-hero .hero-content {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 100%; 
     width: 100%;
   }
 
@@ -2487,14 +2485,14 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   }
 
   .category-hero h1 {
-    font-size: 36px; /* Slightly smaller on mobile */
+    font-size: 36px; 
     margin-top: 0;
     margin-bottom: 24px;
   }
 
   /* Full-width stacked buttons */
   .category-hero .hero-buttons {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; 
     gap: 12px;
     margin-top: 0;
     width: 100%;
@@ -2502,10 +2500,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   .category-hero .hero-buttons .btn-red,
   .category-hero .hero-buttons .btn-outline {
-    width: 100%; /* Full width */
+    width: 100%; 
     text-align: center;
-    margin-right: 0; /* Remove desktop right margin */
-    padding: 16px 20px; /* Bigger tap target */
+    margin-right: 0; 
+    padding: 16px 20px; 
     border-radius: 8px;
     font-size: 16px;
     text-decoration: none;
@@ -2513,9 +2511,9 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
   .category-image-and-text-wrapper {
     display: flex !important;
-    flex-direction: column !important; /* Text on top, image below */
+    flex-direction: column !important; 
     gap: 32px;
-    margin: 0 !important; /* Kill the 80px desktop margin */
+    margin: 0 !important; 
   }
 
   /* 2. Text column full width */
@@ -2562,8 +2560,8 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   }
 
   .acf-description-text * {
-    color: #36393c !important; /* Force all child elements to dark color */
-    text-decoration: none !important; /* Remove any underlines */
+    color: #36393c !important; 
+    text-decoration: none !important; 
   }
 
   /* 8. Image */
@@ -2692,7 +2690,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   }
 
   .rolunk-images__item {
-    flex: 0 0 80%; /* 65% width allows the second card to peek in from the right */
+    flex: 0 0 80%; 
     scroll-snap-align: start;
     text-align: center;
     display: flex;
@@ -2819,7 +2817,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .szolg-slider-wrapper {
-  overflow: hidden; /* clips cards outside view */
+  overflow: hidden; 
   width: 100%;
 }
 
@@ -2984,7 +2982,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
-  align-items: start; /* ← columns don't stretch to match each other */
+  align-items: start; 
 }
 
 .insp-masonry__col {
@@ -3000,7 +2998,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 }
 
 .insp-card__img-wrap {
-  overflow: hidden; /* ← clips the zoomed image */
+  overflow: hidden; 
   border-radius: 10px;
   margin-bottom: 10px;
   will-change: transform;
@@ -3028,7 +3026,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 
 /* Middle column - taller image */
 .insp-card__img--tall {
-  aspect-ratio: 3 / 4; /* ← portrait ratio, taller than wide */
+  aspect-ratio: 3 / 4; 
   height: auto;
 }
 

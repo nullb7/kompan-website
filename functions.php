@@ -194,7 +194,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Enqueue Google Font: Figtree
  */
 function playgroundtheme_google_fonts() {
-	// We load 400 (Regular), 600 (SemiBold), 700 (Bold), and 900 (Black)
 	wp_enqueue_style( 'figtree-font', 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;900&display=swap', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'playgroundtheme_google_fonts' );
