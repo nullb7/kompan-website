@@ -22,7 +22,7 @@ $hero_subtitle = get_field('hero_subtitle');
       <p class="hp-hero__title"><?php echo esc_html($hero_title); ?></p>
       <div class="hp-hero__actions">
         <a href="/kapcsolat" class="btn btn--red">Lépj velünk kapcsolatba!</a>
-        <a href="" class="btn btn--red">Termékkatalógus letöltése</a>
+        <a href="<?php echo home_url( '/?download_catalog=1' ); ?>" class="btn btn--red">Termékkatalógus letöltése</a>
          
       </div>
     </div>
