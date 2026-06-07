@@ -2026,6 +2026,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
+    color: #36393c;
   }
 
   .section-subtitle {
@@ -2195,6 +2196,7 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 8px;
+    color: #36393c;
   }
 
   .section-subtitle {
@@ -2222,7 +2224,6 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
-    color: #111111;
   }
 
   .hp-about__main-text {
@@ -2310,7 +2311,6 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   .service-card__title {
     font-size: 24px;
     font-weight: 700;
-    color: #111111;
     margin-bottom: 8px;
   }
 
@@ -2544,15 +2544,14 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
     font-size: 32px;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: #111;
   }
 
   /* 6. Subtitle */
   .col-md-7-intro {
     font-size: 18px;
     font-weight: 600;
-    color: #111;
     margin-bottom: 1rem;
+    color: var(--text-dark);
   }
 
   /* 7. Body text - kill blue link styles */
@@ -2618,21 +2617,21 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 .rolunk-text__title {
   font-size: 2.25rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-dark);
   margin-bottom: 20px;
 }
 
 .rolunk-text__col p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #444;
+  color: var(--text-dark);
   margin-bottom: 16px;
 }
 
 .rolunk-text__title-nextcol {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-dark);
 }
 
 /* ── Honnan indultunk ── */
@@ -2656,14 +2655,14 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
 .rolunk-origin__title {
   font-size: 2.25rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-dark);
   margin-bottom: 24px;
 }
 
 .rolunk-origin__subtitle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-dark);
   margin: 20px 0 8px;
 }
 

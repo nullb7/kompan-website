@@ -16,7 +16,7 @@ get_header();
         <p class="hp-hero__title">Üdvözöljük a KOMPAN</p>
         <p class="hp-hero__title">világába!</p>
         <div class="hp-hero__actions">
-          <a href="#contact" class="btn btn--red">Lépj velünk kapcsolatba!</a>
+          <a href="kapcsolat/" class="btn btn--red">Lépj velünk kapcsolatba!</a>
           <a href="<?php echo home_url( '/?download_catalog=1' ); ?>" class="btn btn--red">Termékkatalógus letöltése</a>
         </div>
       </div>

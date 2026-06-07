@@ -22,7 +22,7 @@ get_header(); ?>
         <p class="hp-hero__title">Üdvözöljük a KOMPAN</p>
         <p class="hp-hero__title">világába!</p>
         <div class="hp-hero__actions">
-          <a href="/rolunk" class="btn btn--red">Lépj velünk kapcsolatba!</a>
+          <a href="/kapcsolat" class="btn btn--red">Lépj velünk kapcsolatba!</a>
           <a href="<?php echo home_url( '/?download_catalog=1' ); ?>" class="btn btn--red">Termékkatalógus letöltése</a>
         </div>
       </div>
@@ -37,7 +37,7 @@ get_header(); ?>
                 <div class="col-md-7">
                     <div class="intro-body">
                         <p class="col-md-7-title">Kinek segítünk?</p>
-                        <p class="col-md-7-intro">Minedenkinek tervezve, általad inspirálva</p>
+                        <p class="col-md-7-intro">Mindenkinek tervezve, általad inspirálva</p>
                         <div class="acf-description-text">
                             <?php echo $desc_text; ?>
 
