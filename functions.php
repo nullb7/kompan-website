@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-define( 'KATALOGUS_PDF_URL', 'http://kompanwebsite.local/wp-content/uploads/2026/06/Main_Catalogue_2026.pdf' ); // Paste the media library PDF URL here
+define( 'KATALOGUS_PDF_URL', 'https://kompankepviselet.hu/wp-content/uploads/2026/06/Main_Catalogue_2026.pdf' ); // Paste the media library PDF URL here
 
 // Download handler for catalog PDF
 add_action( 'init', function() {

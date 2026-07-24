@@ -9,7 +9,7 @@ get_header();
 <main id="primary" class="site-main">
 
   <!-- HERO -->
-  <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('http://kompanwebsite.local/wp-content/uploads/2026/04/ImageWithFallback.jpg');">
+  <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://kompankepviselet.hu/wp-content/uploads/2026/04/ImageWithFallback.jpg');">
     <div class="container">
       <div class="hp-hero__inner">
         <p class="hp-hero__intro">Miért mi?</p>
@@ -67,12 +67,12 @@ get_header();
 
         <!-- Right: Image -->
         <div class="ref-kiknek__image">
-          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/Rectangle-2.jpg" alt="Kiknek segítünk">
+          <img src="https://kompankepviselet.hu/wp-content/uploads/2026/04/Rectangle-2.jpg" alt="Kiknek segítünk">
         </div>
 
         <!-- Left: Image -->
         <div class="ref-kiknek__image">
-          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/Rectangle-3.jpg" alt="Kiknek segítünk2">
+          <img src="https://kompankepviselet.hu/wp-content/uploads/2026/04/Rectangle-3.jpg" alt="Kiknek segítünk2">
         </div>
 
         <!-- Right Text -->
@@ -108,32 +108,32 @@ get_header();
       
             $szolgatasok = [
               [
-                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/Container.jpg',
+                'img'   => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/Container.jpg',
                 'title' => 'Előkészítés',
                 'desc'  => 'KOMPAN tanácsadóink az egyéni kívánságok és lehetőségek, valamint a területi tulajdonságok figyelembevételével segítenek a működő játszókörnyezet alapkoncepciójának kidolgozásában, a játszószer-családok közüli választásban, a terület különböző korcsoportok és mozgásformák szerinti felosztásában.',
               ],
               [
-                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c.jpg',
+                'img'   => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c.jpg',
                 'title' => 'Felülnézeti- és látványtervek',
                 'desc'  => 'Tervező csapatunk professzionális tanácsokkal segíti Önt a kialakítással kapcsolatban, akár a konkrét játszóeszközök, akár a kiegészítők (padok, hulladékgyűjtők, stb.) vagy a növényzet megtervezéséről van szó. Átfogó AutoCAD 2D vagy 3D látványtervek és komplett javaslatok, változatok kidolgozásával állunk rendelkezésére.',
               ],
               [
-                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c2.jpg',
+                'img'   => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c2.jpg',
                 'title' => 'Tanácsadás, finanszírozás',
                 'desc'  => 'Az előkészítési és tervezési folyamat során számos kérdés merülhet fel. Sok partnerünknek speciális igényei vannak a játszóterekkel kapcsolatban, a biztonsági, jogi és környezetvédelmi kérdéseket illetően, esetleg pályázati lehetőségek terén. Bármilyen kérdés és igény merüljön is fel, ügyfeleinket hozzáértő tanácsadással és szakértő szolgáltatással segítjük.',
               ],
               [
-                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.jpg',
+                'img'   => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.jpg',
                 'title' => 'Kivitelezés',
                 'desc'  => 'Az előkészítési és tervezési folyamat során számos kérdés merülhet fel. Sok partnerünknek speciális igényei vannak a játszóterekkel kapcsolatban, a biztonsági, jogi és környezetvédelmi kérdéseket illetően, esetleg pályázati lehetőségek terén. Bármilyen kérdés és igény merüljön is fel, ügyfeleinket hozzáértő tanácsadással és szakértő szolgáltatással segítjük.',
               ],
               [
-                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg',
+                'img'   => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg',
                 'title' => 'Felülvizsgálat és karbantartás',
                 'desc'  => 'Minden KOMPAN termék alapos tervezési folyamatot követően, legyártásra és első osztályú anyagok felhasználásával készül, így különlegesen tartós és ellenálló. Mindamellett a KOMPAN hitelesített biztonsági felülvizsgálat javasolt.',
               ],
               [
-                'img'   => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c4.jpg',
+                'img'   => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c4.jpg',
                 'title' => 'Szerviz',
                 'desc'  => 'Világszerte ismertek vagyunk a legjobb, széleskörű szervizünkről. Egyedülálló alkatrész utánpótlási szolgáltatásunk a játszóeszköz utolsó kibocsátásától számított 10 évig biztosított. Amennyiben játékaink meghibásodnak, vagy rongálás következtében balesetveszélyessé válnak, kollégáink gondoskodnak azok javításáról, ha ez nem lehetséges, a játszószerek biztonságos elzárásáról.',
               ],
@@ -190,21 +190,21 @@ get_header();
   <!-- INSPIRÁCIÓ GRID -->
   <?php
 $inspiracio_col1 = [
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 1', 'tags' => ['Jatek', 'Kozossegi']],
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 2', 'tags' => ['Jatek']],
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 3', 'tags' => ['Megrendeles']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 1', 'tags' => ['Jatek', 'Kozossegi']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 2', 'tags' => ['Jatek']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 3', 'tags' => ['Megrendeles']],
 ];
 
 $inspiracio_col2 = [
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 4', 'tags' => ['Jatek', 'Kozossegi']],
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 5', 'tags' => ['Jatek']],
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 6', 'tags' => ['Megrendeles']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 4', 'tags' => ['Jatek', 'Kozossegi']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 5', 'tags' => ['Jatek']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 6', 'tags' => ['Megrendeles']],
 ];
 
 $inspiracio_col3 = [
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 7', 'tags' => ['Jatek', 'Kozossegi']],
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 8', 'tags' => ['Jatek']],
-  ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 9', 'tags' => ['Megrendeles']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 7', 'tags' => ['Jatek', 'Kozossegi']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 8', 'tags' => ['Jatek']],
+  ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 9', 'tags' => ['Megrendeles']],
 ];
 ?>
 

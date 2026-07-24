@@ -55,12 +55,12 @@ $hero_subtitle = get_field('hero_subtitle');
             // We'll hardcode these for now to see the design, 
             // then we can make them dynamic with ACF!
             $categories = [
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-11-1.jpg', 'title' => 'Bölcsődék-Óvodák', 'link' => home_url('/bolcsode-ovi/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-12.jpg', 'title' => 'Iskolák', 'link' => home_url('/iskolak/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-13.jpg', 'title' => 'Lakóközösségek', 'link' => home_url('/lakokozzosegek/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-6.jpg', 'title' => 'Vállalatok', 'link' => home_url('/vallalatok/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-16.jpg', 'title' => 'Tervezők', 'link' => home_url('/tervezok/')],
-              ['img' => 'http://kompanwebsite.local/wp-content/uploads/2026/05/image-15.jpg', 'title' => 'Önkormányzatok', 'link' => home_url('/onkormanyzatok/')],
+              ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/05/image-11-1.jpg', 'title' => 'Bölcsődék-Óvodák', 'link' => home_url('/bolcsode-ovi/')],
+              ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/05/image-12.jpg', 'title' => 'Iskolák', 'link' => home_url('/iskolak/')],
+              ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/05/image-13.jpg', 'title' => 'Lakóközösségek', 'link' => home_url('/lakokozzosegek/')],
+              ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/05/image-6.jpg', 'title' => 'Vállalatok', 'link' => home_url('/vallalatok/')],
+              ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/05/image-16.jpg', 'title' => 'Tervezők', 'link' => home_url('/tervezok/')],
+              ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/05/image-15.jpg', 'title' => 'Önkormányzatok', 'link' => home_url('/onkormanyzatok/')],
             ];
 
             foreach ($categories as $cat) : ?>
@@ -123,7 +123,7 @@ $hero_subtitle = get_field('hero_subtitle');
         <!-- Card 1: Playgrounds -->
         <a href="<?php echo esc_url(get_term_link('jatekeszkozok', 'termek_kat')); ?>" class="service-card">
           <div class="service-card__image">
-            <img src="http://kompanwebsite.local/wp-content/uploads/2026/03/services1.jpg" alt="Játszótéri eszközök">
+            <img src="https://kompankepviselet.hu/wp-content/uploads/2026/03/services1.jpg" alt="Játszótéri eszközök">
           </div>
           <div class="service-card__content">
             <h3 class="service-card__title">Játszótéri eszközök</h3>
@@ -134,7 +134,7 @@ $hero_subtitle = get_field('hero_subtitle');
         <!-- Card 2: Fitness -->
         <a href="<?php echo esc_url(get_term_link('fitneszeszkozok', 'termek_kat')); ?>" class="service-card">
           <div class="service-card__image">
-            <img src="http://kompanwebsite.local/wp-content/uploads/2026/03/services2.jpg" alt="Szabadtéri fitneszeszközök">
+            <img src="https://kompankepviselet.hu/wp-content/uploads/2026/03/services2.jpg" alt="Szabadtéri fitneszeszközök">
           </div>
           <div class="service-card__content">
             <h3 class="service-card__title">Szabadtéri fitneszeszközök</h3>
@@ -150,7 +150,7 @@ $hero_subtitle = get_field('hero_subtitle');
   <!-- CALL-TO-ACTION -->
   <section class="hp-cta-banner">
     <div class="container">
-      <div class="hp-cta-banner__inner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('http://kompanwebsite.local/wp-content/uploads/2026/03/CTA.png');">
+      <div class="hp-cta-banner__inner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://kompankepviselet.hu/wp-content/uploads/2026/03/CTA.png');">
         <div class="hp-cta-banner__content">
           <p class="hp-cta-banner__subtitle">Kíváncsi vagy a megvalósult projektekre?</p>
           <h2 class="hp-cta-banner__title">Keress referenciát a saját területedhez</h2>

@@ -9,7 +9,7 @@ get_header();
 <main id="primary" class="site-main">
 
   <!-- HERO SECTION -->
-  <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('http://kompanwebsite.local/wp-content/uploads/2026/04/51264810f1cf724a52ed5d8af2ece8baaaf93ac6-scaled.png');">
+  <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://kompankepviselet.hu/wp-content/uploads/2026/04/51264810f1cf724a52ed5d8af2ece8baaaf93ac6-scaled.png');">
     <div class="container">
       <div class="hp-hero__inner">
         <p class="hp-hero__intro">A Magyar cégről</p>
@@ -37,13 +37,13 @@ get_header();
     <div class="container">
       <div class="rolunk-images__grid">
         <div class="rolunk-images__item">
-          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/rolunk-02-202x202-1.jpg" alt="Kompan kép 1">
+          <img src="https://kompankepviselet.hu/wp-content/uploads/2026/04/rolunk-02-202x202-1.jpg" alt="Kompan kép 1">
         </div>
         <div class="rolunk-images__item rolunk-images__item--tall">
-          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/rolunk-03-202x202-1.jpg" alt="Kompan kép 2">
+          <img src="https://kompankepviselet.hu/wp-content/uploads/2026/04/rolunk-03-202x202-1.jpg" alt="Kompan kép 2">
         </div>
         <div class="rolunk-images__item">
-          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/rolunk-04-202x202-1.jpg" alt="Kompan kép 3">
+          <img src="https://kompankepviselet.hu/wp-content/uploads/2026/04/rolunk-04-202x202-1.jpg" alt="Kompan kép 3">
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@ get_header();
 
         <!-- Left: Image -->
         <div class="rolunk-origin__image">
-          <img src="http://kompanwebsite.local/wp-content/uploads/2026/04/Rectangle-1.jpg" alt="Honnan indultunk">
+          <img src="https://kompankepviselet.hu/wp-content/uploads/2026/04/Rectangle-1.jpg" alt="Honnan indultunk">
         </div>
 
         <!-- Right: Text -->
