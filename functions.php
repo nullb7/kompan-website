@@ -60,6 +60,9 @@ function playgroundtheme_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	// Cropped size for full-width hero banners, so we don't ship full-resolution originals.
+	add_image_size( 'hero', 1920, 800, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
@@ -162,6 +165,43 @@ function playgroundtheme_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'playgroundtheme_scripts' );
+
+/**
+ * Preload the hero banner image on pages that use one.
+ *
+ * The hero is set via CSS background-image, which the browser only discovers
+ * after parsing the stylesheet — that delays the Largest Contentful Paint.
+ * Preloading it lets the browser start the fetch immediately from the HTML.
+ */
+function playgroundtheme_get_hero_image_url() {
+	if ( is_front_page() ) {
+		$hero_bg = get_field( 'hero_bg' );
+		return $hero_bg ? ( $hero_bg['sizes']['hero'] ?? $hero_bg['sizes']['large'] ?? $hero_bg['url'] ) : '';
+	}
+
+	if ( is_page_template( 'template-category-page.php' ) ) {
+		$hero_img = get_field( 'hero_image' );
+		return $hero_img ? ( $hero_img['sizes']['hero'] ?? $hero_img['sizes']['large'] ?? $hero_img['url'] ) : '';
+	}
+
+	if ( is_page_template( 'page-rolunk.php' ) ) {
+		return 'https://kompankepviselet.hu/wp-content/uploads/2026/04/51264810f1cf724a52ed5d8af2ece8baaaf93ac6-scaled.png';
+	}
+
+	if ( is_page_template( 'page-referenciak.php' ) ) {
+		return 'https://kompankepviselet.hu/wp-content/uploads/2026/04/ImageWithFallback.jpg';
+	}
+
+	return '';
+}
+
+function playgroundtheme_preload_hero_image() {
+	$url = playgroundtheme_get_hero_image_url();
+	if ( $url ) {
+		printf( '<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n", esc_url( $url ) );
+	}
+}
+add_action( 'wp_head', 'playgroundtheme_preload_hero_image', 1 );
 
 /**
  * Implement the Custom Header feature.

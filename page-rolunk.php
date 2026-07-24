@@ -12,7 +12,7 @@ get_header();
   <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://kompankepviselet.hu/wp-content/uploads/2026/04/51264810f1cf724a52ed5d8af2ece8baaaf93ac6-scaled.png');">
     <div class="container">
       <div class="hp-hero__inner">
-        <p class="hp-hero__intro">A Magyar cégről</p>
+        <p class="hp-hero__intro">A magyar cégről</p>
         <p class="hp-hero__title">Üdvözöljük a KOMPAN</p>
         <p class="hp-hero__title">világába!</p>
         <div class="hp-hero__actions">
@@ -58,7 +58,7 @@ get_header();
         <div class="rolunk-text__col">
           <h2 class="rolunk-text__title">Cégtörténet</h2>
           <p>50 évvel ezelőtt <strong>Tom Lindhardt Wils</strong> fiatal művészként szemtanúja volt egy eseménynek, amely megváltoztatta a gyermekjátékok világát. Egyik szobrát kihelyezték egy újonnan épült, tömbházakból álló lakótelepen, hogy szint vigyen az egyébként rideg és egyhangú környezetbe. Felfedezte, hogy a gyermekek, ahelyett, hogy megcsodálnák művét, boldogan játszanak rajta, elhatározta, hogy kerek formákat visz a szögletes világba, megalkotva egy új művészetet a gyermekek számára.</p>
-          <p>Azzal kezdte, hogy fogott egy puzzle darabot, majd hozzá hasonló szabadon hullámzó <strong>alakzatokat vágott ki</strong> furnérlemezeől, melyeket <strong>élénk színűekre festett</strong>, végül egymás mellé helyezte őket, így hozva létre <strong>különböző tereket és mozgásformákat a gyermekeknek</strong>. Művelt a 60-as évek kockaházai elé helyezte, hogy segítse a gyermekeket a lakóházak megkülönböztetésében, és a sajátjuk megtalálásában.</p>
+          <p>Azzal kezdte, hogy fogott egy puzzle darabot, majd hozzá hasonló szabadon hullámzó <strong>alakzatokat vágott ki</strong> furnérlemezekből, melyeket <strong>élénk színűekre festett</strong>, végül egymás mellé helyezte őket, így hozva létre <strong>különböző tereket és mozgásformákat a gyermekeknek</strong>. Műveit a 60-as évek kockaházai elé helyezte, hogy segítse a gyermekeket a lakóházak megkülönböztetésében, és a sajátjuk megtalálásában.</p>
           <p>1970-ben Tom létrehozott egy – kifejezetten gyermekeknek szóló – játszóeszközökkel foglalkozó céget, a <strong>KOMPAN-t</strong>, amely Tom művészi filozófiáját követve – folytatja a termékfejlesztést mind a mai napig.</p>
         </div>
 
@@ -95,7 +95,7 @@ get_header();
           <h3 class="rolunk-origin__subtitle">A Magyar cégről</h3>
           <p>Képviseletünket Kenéz János egyéni vállalkozó alapította 1991-ben. Családja vezetésével cégünk több, mint 25 éve foglalkozik a KOMPAN játszótéri berendezések forgalmazásával.</p>
           <p>A Kompan Képviselet vevőorientáltsága, és megbízhatósága, kombinálva termékeink változatos formatervezésével és magas minőségével tette lehetővé, hogy ma már az ország teljes területén megtalálhatók játszóeszközeink, játszótereink. Elmondhatjuk, hogy ügyfeleink elégedettsége és cégünkbe vetett bizalma megalapozott, s ennek köszönhetően hosszú távú üzleti kapcsolatot tudunk kialakítani.</p>
-          <p>Célunk, hogy az igények és lehetőségek figyelembevételével olyan játszótereket hozzunk létre közterületeken, gyermekintézményekben és magánkertekben egyaránt, amelyek a biztonságos használat és a kiemelt eszközminőség mellett maximálisan megfelelnek a gyermek játékigényének, aktivitásának, fantáziájának és kreativitásának, valamint a környezetvédelmi szempontoknak – hosszútávon is.</p>
+          <p>Célunk, hogy az igények és lehetőségek figyelembevételével olyan játszótereket hozzunk létre közterületeken, gyermekintézményekben és magánkertekben egyaránt, amelyek a biztonságos használat és a kiemelt eszközminőség mellett maximálisan megfelelnek a gyermek játékigényének, aktivitásának, fantáziájának és kreativitásának, valamint a környezetvédelmi szempontoknak – hosszú távon is.</p>
         </div>
 
       </div>

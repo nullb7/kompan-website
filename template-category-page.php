@@ -12,13 +12,14 @@ get_header(); ?>
         $hero_ttl  = get_field('hero_title');
         $desc_text = get_field('main_description');
         $side_img  = get_field('secondary_content_image');
+        $hero_img_url = $hero_img ? ( $hero_img['sizes']['hero'] ?? $hero_img['sizes']['large'] ?? $hero_img['url'] ) : '';
     ?>
 
     <!-- Hero Section -->
-      <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('<?php echo esc_url($hero_img['url']); ?>');">
+      <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('<?php echo esc_url($hero_img_url); ?>');">
     <div class="container">
       <div class="hp-hero__inner">
-        <p class="hp-hero__intro">A Magyar cégről</p>
+        <p class="hp-hero__intro">A magyar cégről</p>
         <p class="hp-hero__title">Üdvözöljük a KOMPAN</p>
         <p class="hp-hero__title">világába!</p>
         <div class="hp-hero__actions">

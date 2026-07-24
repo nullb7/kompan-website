@@ -9,13 +9,14 @@ get_header();
 $hero_bg       = get_field('hero_bg');
 $hero_title    = get_field('hero_title');
 $hero_subtitle = get_field('hero_subtitle');
+$hero_bg_url   = $hero_bg ? ( $hero_bg['sizes']['hero'] ?? $hero_bg['sizes']['large'] ?? $hero_bg['url'] ) : '';
 ?>
 
 
 <main id="primary" class="site-main">
 
 <!-- HERO SECTION -->
- <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('<?php echo esc_url($hero_bg['url'])  ?>');">
+ <section class="hp-hero" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('<?php echo esc_url($hero_bg_url)  ?>');">
   <div class="container">
     <div class="hp-hero__inner">
       <p class="hp-hero__intro"><?php echo esc_html($hero_subtitle); ?></p>

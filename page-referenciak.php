@@ -40,7 +40,7 @@ get_header();
           <p>A Kompan Képviselet vevőorientáltsága, és megbízhatósága, kombinálva termékeink változatos formavilágával és magas minőségével tette lehetővé, hogy ma már az ország teljes területén megtalálhatóak játszóeszközeink, játszótereink. Elmondhatjuk, hogy ügyfeleink elégedettsége és cégünkbe vetett bizalma megalapozott, s ennek köszönhetően hosszú távú üzleti kapcsolatot tudunk kialakítani.</p>
         </div>
         <div class="ref-biztonsag__col">
-          <p>Célunk, hogy az igények és lehetőségek figyelembevételével olyan játszótereket hozzunk létre közterületeken, gyermekintézményekben és magánkertekben egyaránt, amelyek a biztonságos használat és a kiemelt eszközminőség mellett maximálisan megfelelnek a gyermek játékigényének, aktivitásának, fantáziájának és kreativitásának, valamint a környezetvédelmi szempontoknak – hosszútávon is.</p>
+          <p>Célunk, hogy az igények és lehetőségek figyelembevételével olyan játszótereket hozzunk létre közterületeken, gyermekintézményekben és magánkertekben egyaránt, amelyek a biztonságos használat és a kiemelt eszközminőség mellett maximálisan megfelelnek a gyermek játékigényének, aktivitásának, fantáziájának és kreativitásának, valamint a környezetvédelmi szempontoknak – hosszú távon is.</p>
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@ get_header();
         <div class="ref-kiknek__content">
           <h3 class="ref-kiknek__subtitle">Mindenkinek tervezve, általad inspirálva</h3>
 
-          <p><strong>Tanusítás:</strong> A KOMPAN gyártási és értékesítési folyamatai kidolgozott rendszer szerint működnek, valamint képviseletünk ISO 9001 minőségtanúsítási-, ISO 14001 környezetközpontú irányítási-, és ISO 28001 munkahelyi egészségvédelem és biztonság irányításirendszer szerint tanúsított.
+          <p><strong>Tanúsítás:</strong> A KOMPAN gyártási és értékesítési folyamatai kidolgozott rendszer szerint működnek, valamint képviseletünk ISO 9001 minőségtanúsítási-, ISO 14001 környezetközpontú irányítási-, és ISO 28001 munkahelyi egészségvédelem és biztonság irányításirendszer szerint tanúsított.
           Az általunk forgalmazott valamennyi berendezés megfelel az MSZ EN 1176. sz. szabvány vonatkozó fejezeteiben meghatározottaknak. A szabványnak való megfelelést minden egyes játszószer esetében a független TÜV laboratóriumaiban kiállított jegyzőkönyvek tanúsítják</p>
 
           <p><strong>Pályázatok:</strong> Figyelemmel kísérjük az ügyfeleink számára alkalmas pályázati lehetőségeket. Igény szerint biztosítjuk a közbeszerzési pályázatok előkészítéséhez szükséges játszóeszköz dokumentációkat, lehetőség szerint megelőzve a pályázati felhívást, hiszen adott esetben jelentős helyzeti előnyt biztosít, ha a pályázati lehetőség megjelenésekor kész játszótér dokumentáció áll rendelkezésre. Stabil hátteret ad az időben egyeztetett, kidolgozott, a döntéshozók, polgármesteri hivatal esetében a képviselő testület által jóváhagyott költségvetés és előzetes tervek megléte, amelyeket adott esetben rugalmasan módosítunk a pályázati előírásoknak és lehetőségeknek megfelelően. A tervezett játszótér területének felmérése és előzetes terveinek, költségvetésének készítése díjmentes.</p>
@@ -171,7 +171,7 @@ get_header();
   <section class="ref-map">
     <div class="container">
       <div class="ref-map__wrap">
-        <h2 class="ref-map__title">Munkaink</h2>
+        <h2 class="ref-map__title">Munkáink</h2>
         <div class="ref-map__embed">
           <!-- NOTE: Google maps link kell ide! -->
           <iframe
@@ -187,7 +187,10 @@ get_header();
     </div>
   </section>
 
+  <?php if (false): ?>
   <!-- INSPIRÁCIÓ GRID -->
+
+
   <?php
 $inspiracio_col1 = [
   ['img' => 'https://kompankepviselet.hu/wp-content/uploads/2026/04/c3.5.jpg', 'title' => 'Card 1', 'tags' => ['Jatek', 'Kozossegi']],
@@ -270,6 +273,7 @@ $inspiracio_col3 = [
     </div>
   </div>
 </section>
+  <?php endif; ?>
 
 </main>
 

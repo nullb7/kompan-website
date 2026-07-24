@@ -2105,9 +2105,10 @@ MOBILE RESPONSIVE STYLES (MATCHING FIGMA)
   }
 
   .hp-hero .container {
+    width: 100%;
     margin: 0;
-    padding-top: 0; 
-    padding: 0 20px; 
+    padding-top: 0;
+    padding: 0 20px;
   }
 
   /* --- 2. Fix Buttons (This is what broke in Image 5) --- */

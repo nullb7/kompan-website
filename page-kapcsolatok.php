@@ -16,18 +16,13 @@ get_header();
       <!-- Left: Contact Form -->
       <div class="kapcsolat-form-wrap">
         <h2 class="kapcsolat-block__title">Lépj kapcsolatba velünk!</h2>
-        <?php
-          $form_id = get_field('kapcsolat_form_id'); // ACF field for CF7 form ID
-          if ($form_id) {
-            echo do_shortcode('[contact-form-7 id="' . esc_attr($form_id) . '"]');
-          }
-        ?>
+        <?php echo do_shortcode('[contact-form-7 id="b341141" title="Kapcsolat Form"]'); ?>
       </div>
 
       <!-- Right: Contact Info + Map -->
       <div class="kapcsolat-info-wrap">
         <div class="kapcsolat-form-wrap">
-          <h2 class="kapcsolat-block__title">Lépj kapcsolatba velünk!</h2>
+          <h2 class="kapcsolat-block__title">Elérhetőségeink!</h2>
           
           <ul class="kapcsolat-info-list">
             
